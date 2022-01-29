@@ -1,7 +1,10 @@
 ﻿body {
 }
 
+
+
 div#header {
+    /*border-top: 50px solid green;*/
     width: 100%;
     height: 90px;
     top: 0;
@@ -9,10 +12,11 @@ div#header {
     background-color: #F0F0F0;
 }
 
+
+
 div#header2 {
     width: 100%;
-    height: 360px;
-    /*top: 90px;*/
+    margin-top: 30px;
     left: 0;
     background-color: #D0D0D0;
     top: 91px;
@@ -36,13 +40,13 @@ nav#mainnav {
     }
 
         nav#mainnav ul li {
-            background-color: #b3e0ff;
+      
             text-align: center;
             display: inline;
             width: 10%;
             float: left;
             margin-left: .5em;
-            border-radius: 10px;
+         
         }
 
             nav#mainnav ul li a {
@@ -52,6 +56,6 @@ nav#mainnav {
                 font-weight: 900;
                 text-decoration: none;
                 color: black;
-                display: block;
-                padding: .75em;
+                         padding: .75em;
             }
+
