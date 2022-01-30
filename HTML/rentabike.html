@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Community Rent-A-Bike</title>
+		<!--
+			Community Rent-A-Bike, Bike Rental Page
+			Filename: rentabike.html
+      
+			Author: Avery Garant  
+			Date: 1/29/2022    
+		-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+
+		<!--Updated CSS Path -->
+		<link rel="stylesheet" href="../CSS/a_styles.css">
+		<link rel="stylesheet" href="../CSS/styles.css">
+		<script src="a_javascript.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1 style="font-family: arvo, Calibri, Tahoma;">Community Rent-A-Bike</h1>
+			</header>
+				<nav id="mainnav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="pricing.html">Pricing</a></li>
+					<li><a href="rentabike.html">Rent a Bike</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+					<br>
+			<article>
+				<div class="overlap">
+									<!--	Updated Images path -->
+					<img src="../Images/Scenic_Bike_Paths_header1.jpg" alt="scene" style="width:100%;">
+
+					<section class='centered'>
+						<h2>Rent a Bike from Rent-A-Bike!</h2>
+						<select name="cities" id="cities">
+							<option selected disabled>Choose a City to Ride in</option>
+							<option value="GR">Grand Rapids</option>
+							<option value="Lansing">Lansing</option>
+							<option value="Detroit">Detroit</option>
+							<option value="Holland">Holland</option>
+							<option value="Novi">Novi</option>
+							<option value="Traverse">Traverse City</option>
+						</select>
+						<input type="date" id="pickup" name="pickup">
+						<input type="date" id="dropoff" name="dropoff">
+						<select name="bikesnum" id="bikesnum">
+							<option selected disabled>How many Bikes?</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						<input type="submit" id="submit" value="Submit">
+					</section>
+				</div>
+				<br>
+				<h2 style="text-align: center;">Browse where you can ride!</h2>
+				<br>
+				<div class="grid">
+					<table style="margin-left:auto;margin-right:auto;">
+						<tr>
+							<td style="padding:25px">
+								<a class="overlay" href="https://visitgrandrapids.com/" target="_blank"><img src="images/grandrapids.jpg" alt="Grand Rapids" width="300" height="200"></a>
+								<figcaption>Grand Rapids</figcaption>
+							</td>
+							<td style="padding:25px">
+								<a href="https://visitdetroit.com/" target="_blank"><img src="images/detroit.jpg" alt="Detroit" width="300" height="200"></a>
+								<figcaption>Detroit</figcaption>
+							</td>
+							<td style="padding:25px">
+								<a href="https://www.traversecity.com/" target="_blank"><img src="images/traverse.jpg" alt="Travese City" width="300" height="200"></a>
+								<figcaption>Traverse City</figcaption>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:25px">
+								<a href="https://www.lansing.org/plan-your-trip/" target="_blank"><img src="images/lansing.jpg" alt="Lansing" width="300" height="200"></a>
+								<figcaption>Lansing</figcaption>
+							</td>
+							<td style="padding:25px">
+								<a href="https://www.holland.org/" target="_blank"><img src="images/holland.jpg" alt="Holland" width="300" height="200"></a>
+								<figcaption>Holland</figcaption>
+							</td>
+							<td style="padding:25px">
+								<a href="https://www.michigan.org/city/novi#?c=44.4299:-85.1166:6&tid=1186&page=0&pagesize=20&pagetitle=Novi" target="_blank"><img src="images/novi.jpg" alt="Novi" width="300" height="200"></a>
+								<figcaption>Novi</figcaption>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</article>
+			<br>
+			<footer>
+				<p class="view">This site is best viewed in Chrome or Firefox</p>
+			</footer>
+		</div>
+		<!--  updating js reference-->
+		<script src="../JavaScript/script.js"></script>
+	</body>
+</html>
