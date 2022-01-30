@@ -1,8 +1,6 @@
-﻿const text = document.querySelector("p");
-console.log(text);
+﻿
 
-
-
+//James W Javascript Starts here
 //function that controls moving text
 setInterval(function moveText() {
     context.fillStyle = "green";
@@ -35,3 +33,5 @@ setInterval(function moveText() {
 
 
 }, 20)
+
+//James W Javascript ends here

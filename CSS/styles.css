@@ -1,15 +1,20 @@
-﻿body {
+﻿/*James W CSS Starts here*/
+body {
 }
 
 
 
 div#header {
-    /*border-top: 50px solid green;*/
-    width: 100%;
+      width: 100%;
     height: 90px;
     top: 0;
     left: 0;
     background-color: #F0F0F0;
+}
+div#description p {
+    color: black;
+    font-family: arvo, Calibri, Tahoma;
+    font-size: 25px;
 }
 
 
@@ -18,7 +23,7 @@ div#header2 {
     width: 100%;
     margin-top: 30px;
     left: 0;
-    background-color: #D0D0D0;
+    background-color: #909090;
     top: 91px;
     color: white;
 }
@@ -59,3 +64,12 @@ nav#mainnav {
                          padding: .75em;
             }
 
+div#footer {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    background-color: #F0F0F0;
+    bottom: 0;
+}
+
+/*James W CSS Ends here*/

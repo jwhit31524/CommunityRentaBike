@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<html >
+﻿
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Community Rent-a-Bike</title>
@@ -15,42 +16,56 @@
         var canvas = document.createElement("canvas");
         var context = canvas.getContext("2d");
 
-        canvas.width = 1200;
+        canvas.width = 1900;
         canvas.height = 50;
 
         document.body.appendChild(canvas);
 
         context.fillStyle = "green";
-        context.fillRect(0, 0, canvas.width, canvas.height);
+       
 
         var posX = 200;
         var posY = 200;
-        dx = 1;
+        dx = 1;  //creates movement for text
         dy = 0;
     </script>
     <div id="header">
 
-       </div>
+    </div>
     <div style="clear:both;"></div>
-
+    
     <nav id="mainnav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="rentabike.html">Rent a Bike</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
+        </ul>
     </nav>
     <div style="clear:both;"></div>
     <div id="header2">
         <h2>Welcome to Community Rent-a-Bike</h2>
-        <img src="../Images/beachBikePic.jpg" width="700" height="313"><br />
+        <img src="../Images/beachBikePic.jpg" alt="logo" width="700" height="313"><br />
     </div>
 
     <div style="clear:both;"></div>
 
 
+    
+    <div id="description">
+        <p>
+            Hi there! If you're looking for a quality, affordable bicycle to rent, then you are at the right place.<br />
+            Since 2010, we have been providing quality customer service and enjoyable riding experiences for the general public.<br />
+            Check out our pricing and bike rental options today.<br />
+            We look forward to hearing from you!<br />
+        </p>
 
+    </div>
+    <div id="footer">
+
+      
+
+    </div>
 
     <script src="modernizr.custom.05819.js"></script>
     <script src="../JavaScript/script.js"></script>
