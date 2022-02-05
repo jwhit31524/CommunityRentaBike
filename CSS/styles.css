@@ -1,3 +1,4 @@
+
 /*2 stylesheet*/
 /* 
 Selector	         Example	  Example description
@@ -10,6 +11,8 @@ element	              p	          Selects all <p> elements
 element,element,..	div, p	      Selects all <div> elements and all <p> elements 
 */
 
+
+/*James W and Ammar Stylesheet begin*/
 div#headerJ {
     position: relative;
     width: 100%;
@@ -132,3 +135,233 @@ div#footer {
 }
 
 /*end 2 stylesheet */
+/*James W and Ammar Stylesheet end*/
+
+
+/* 
+
+/* James Kaalakea starts here*/
+
+/*Reset rules*/
+html, nav, ol, ul, li, body, header, article, h1, h2, h3, footer, p, {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+    nav.mainnav {
+        background-color: #B0B0B0;
+        text-align: center;
+    }
+
+        nav.mainnav li {
+            display: inline-block;
+            padding: 1em;
+            color: #00FF00;
+        }
+
+        nav.mainnav a:hover {
+            color: blue;
+        }
+
+        nav.mainnav a:active {
+            background-color: #ADD8E6;
+            color: red;
+        }
+
+        nav.mainnav a:visited {
+            color: black;
+        }
+
+        nav.mainnav a:hover, nav.Navigation a:focus {
+            text-shadow: 0 0 6px #e00000;
+        }
+
+        nav.mainnav a {
+            float: none;
+            text-align: center;
+            padding: auto;
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+
+header {
+    background-color: #B0B0B0;
+    font-size: 35px;
+    padding: .5em;
+    text-align: center;
+}
+
+article {
+    text-align: center;
+    width: auto;
+    background: #B0B0B0;
+}
+
+h1 {
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+article p {
+    padding: 3px;
+    text-align: center;
+    font-size: 20px;
+}
+
+article ul {
+    padding: 2px;
+    text-align: center;
+    list-style: none;
+}
+
+article ol li {
+    text-align: center;
+    padding: 2px;
+    font-size: 20px;
+    list-style: none;
+}
+
+div#Form1 {
+    margin: auto;
+    width: 50%;
+    background-color: white;
+}
+
+/* James Kaalakea ends here*/
+
+/*Avery stylesheet starts here*/
+/* 
+   Community Rent-A-Bike, Bike Rental Page
+	Filename: a_styles.css
+      
+	Author: Avery Garant  
+	Date: 1/29/2022      
+*/
+
+/* reset Sytles */
+html {
+    font-size: 14px;
+}
+
+article, aside, body, div, footer, header, h1, h2, h3, nav, p, img, figcaption, iframe, ul, table,
+thead, tbody, th, td {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Header */
+
+
+
+/* Body */
+
+.overlap {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+img.overlap {
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+input[type=date], input[type=submit] {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+}
+
+select#cities, select#bikesnum {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border: none;
+}
+
+input[type=submit] {
+}
+
+h2 {
+    font: "Times New Roman";
+    padding: 40px;
+    font-size: 4em;
+    font-family: arvo, Calibri, Tahoma;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    transition-duration: 0.4s;
+}
+
+    input[type=submit]:hover {
+        background-color: white;
+        color: #04AA6D;
+        border: 2px solid green;
+    }
+
+figcaption {
+    text-align: center;
+    font-family: arvo, Calibri, Tahoma;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Footer */
+
+
+/*Avery stylesheet starts here*/
+
+
+
+
+
+
+
+
+
+
+
+
+
