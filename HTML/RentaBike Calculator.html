@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   
+   <meta charset ="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <link rel= "stylesheet" href="styles.css"/>
+   <script src="modernizr.custom.05819.js"></script>
+   </head>
+   <body>
+   
+   <!--
+   <form action="" method="get">
+   <label for="numBikes">Enter Number of Bikes:</label><br>
+   <input type="number" id="numBikes" name="numBikes" min="1" max="120" value=""><br>
+   <label for="Hrs1">Enter Number of Hours You Will Be Renting:</label><br>
+   <input type="number" id="Hrs1" name="Hrs1" value=""><br>
+   <label>Total Cost:</label><br>
+   <label id="Cost1"><span></span></label><br>
+   <input type="submit" value="Submit" onClick="MultiplyBikes">
+   </form>
+   -->
+   
+   <table>
+	<tr>
+		<td>
+			<label for="numBikes">Enter Number of Bikes:</label><br>
+			<input type="number" id="numBikes" name="numBikes" min="1" max="120" value="" onchange="multiplyBikes()"><br>
+		</td>
+    </tr>
+	
+	<tr>
+		<td>
+			<label for="Hrs1">Enter Number of Hours You Will Be Renting:</label><br>
+			<input type="number" id="Hrs1" name="Hrs1" value="" onchange="multiplyBikes()"><br>
+		</td>
+    </tr>
+	
+	<tr>
+		<td>
+			<p>Total Cost: $<span id="Cost1"></span></p>
+			<!--<label>Total Cost:<span id="Cost1"></span></label><br> -->
+		</td>
+    </tr>
+	<!--
+	<tr>
+		<td>
+			<input type="submit" value="Submit" onClick="MultiplyBikes">
+		</td>
+    </tr>
+	-->
+   </table>
+   
+   
+   <script>
+    function multiplyBikes()
+    {
+		num1 = document.getElementById("numBikes").value;
+		num2 = document.getElementById("Hrs1").value;
+		document.getElementById("Cost1").innerHTML = num1*(num2*10);
+    }
+  </script>
+   
+   
+   </body>
+   </html>
