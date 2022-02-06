@@ -35,7 +35,10 @@
 
     </div>
 
-
+<div class="calculatorButton">
+	<p>Trying to plan your rentals? Use our provided price quoting calculator by clicking the "calculate" button below! Please ensure that your browser supports pop ups in order to properly experience this site function.</p>
+	<button type="button"><a href="RentaBikeCalculator.html" onclick="Popup(this.href,'myWindow','400','300','yes');return false">Calculate</a></button>
+</div><hr>
 
     <div class="column">
         <div class="container">
@@ -111,6 +114,17 @@
     <script src="modernizr.custom.05819.js"></script>
     <!--  adding js reference -->
     <script src="../JavaScript/script.js"></script>
+	<script>
+		var popupWindow = null;
+		function Popup(url,winName,w,h,scroll){
+			LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+			TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+			
+			specs = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+			
+			popupWindow = window.open(url,winName,specs)
+		}
+	</script>
 
 
 </body>
