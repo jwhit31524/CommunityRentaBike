@@ -244,7 +244,7 @@ div#Form1 {
 
 /* James Kaalakea ends here*/
 
-/*Avery stylesheet starts here*/
+/*---------------------------------------Avery stylesheet starts here------------------------------------------------*/
 /* 
    Community Rent-A-Bike, Bike Rental Page
 	Filename: a_styles.css
@@ -322,9 +322,6 @@ select#cities, select#bikesnum {
     border: none;
 }
 
-input[type=submit] {
-}
-
 h2 {
     font: "Times New Roman";
     padding: 40px;
@@ -350,10 +347,47 @@ figcaption {
     font-weight: bold;
 }
 
+div.calculatorButton{
+	font-family: arvo, Calibri, Tahoma;
+    font-size: 18px;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 10px;
+}
+
+div.calculatorButton button{
+	background-color: #04AA6D;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 12px;
+}
+
+div.calculatorButton button:hover{
+	opacity: 50%;
+}
+
+div.calculatorButton a{
+	text-decoration: none;
+	color: white;
+}
+
+table.calculator{
+	font-size: 18px; 
+	font-family: arvo, Calibri, Tahoma;
+	text-align: center;
+	margin-left:auto; 
+    margin-right:auto;
+}
+
+
 /* Footer */
 
 
-/*Avery stylesheet starts here*/
+/*-------------------------------Avery stylesheet ends here------------------------------------*/
 
 
 
