@@ -13,6 +13,53 @@ element,element,..	div, p	      Selects all <div> elements and all <p> elements
 
 
 /*James W and Ammar Stylesheet begin*/
+
+div#reservationFormDiv {
+    position: fixed;
+    background-color: white;
+    display: none;
+    background-color: white;
+    height: 400px;
+    width: 400px;
+}
+.button {
+    color: white;
+    background-color: #04AA6D;
+    left: 370px;
+    position: relative;
+}
+    .submitReserveFormButton {
+        background-color: #FFFF99;
+       color: black;
+       left: 22em;
+    }
+
+.cancelReserveFormButton {
+    background-color: lightgrey;
+    color: black;
+    left: 8em;
+}
+
+
+
+#reserveForm {
+    padding-top: 10px;
+    padding-left: 10px;
+    position: fixed;
+    left: 10px;
+    display: none;
+    background-color: white;
+    height: 490px;
+    width: 460px;
+    /*   top: 150px;
+    
+    display: none;
+    background-color: white;
+    height: 490px;
+    width: 490px;
+    /*   justify-content: center;
+    align-items: center;*/
+}
 div#headerJ {
     position: relative;
     width: 100%;
@@ -22,6 +69,8 @@ div#headerJ {
     margin-bottom: 5px;
    
 }
+
+
 body {
     background-color: #f1f1f1;
 }
@@ -81,7 +130,7 @@ body {
 }
 
 .overlay {
-    position: absolute;
+/*    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -91,7 +140,7 @@ body {
     opacity: 0;
     transition: .5s ease;
     background-color: #04AA6D;
-    border-radius: 25px;
+    border-radius: 25px;*/
 }
 
 .container:hover .overlay {
@@ -235,11 +284,9 @@ article ol li {
 }
 
 div#Form1 {
-    padding: 70px 0;
-    text-align: center;
     margin: auto;
     width: 50%;
-    background-color: #B0B0B0;
+    background-color: white;
 }
 
 /* James Kaalakea ends here*/
@@ -347,40 +394,40 @@ figcaption {
     font-weight: bold;
 }
 
-div.calculatorButton{
-	font-family: arvo, Calibri, Tahoma;
+div.calculatorButton {
+    font-family: arvo, Calibri, Tahoma;
     font-size: 18px;
-	padding-left: 10%;
-	padding-right: 10%;
-	padding-bottom: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10px;
 }
 
-div.calculatorButton button{
-	background-color: #04AA6D;
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	display: inline-block;
-	font-size: 16px;
-	border-radius: 12px;
-}
+    div.calculatorButton button {
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+    }
 
-div.calculatorButton button:hover{
-	opacity: 50%;
-}
+        div.calculatorButton button:hover {
+            opacity: 50%;
+        }
 
-div.calculatorButton a{
-	text-decoration: none;
-	color: white;
-}
+    div.calculatorButton a {
+        text-decoration: none;
+        color: white;
+    }
 
-table.calculator{
-	font-size: 18px; 
-	font-family: arvo, Calibri, Tahoma;
-	text-align: center;
-	margin-left:auto; 
-    margin-right:auto;
+table.calculator {
+    font-size: 18px;
+    font-family: arvo, Calibri, Tahoma;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -388,6 +435,15 @@ table.calculator{
 
 
 /*-------------------------------Avery stylesheet ends here------------------------------------*/
+
+
+
+
+
+
+
+
+
 
 
 
