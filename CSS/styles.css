@@ -235,9 +235,11 @@ article ol li {
 }
 
 div#Form1 {
+    padding: 70px 0;
+    text-align: center;
     margin: auto;
     width: 50%;
-    background-color: white;
+    background-color: #B0B0B0;
 }
 
 /* James Kaalakea ends here*/
