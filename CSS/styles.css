@@ -14,43 +14,46 @@ element,element,..	div, p	      Selects all <div> elements and all <p> elements
 
 /*James W and Ammar Stylesheet begin*/
 
-div#reservationFormDiv {
+/*div#reservationFormDiv {
+    top: 5%;
     position: fixed;
     background-color: white;
     display: none;
-    background-color: white;
-    height: 400px;
-    width: 400px;
-}
+    height: 25%;
+    width: 25%;
+}*/
 .button {
     color: white;
     background-color: #04AA6D;
-    left: 370px;
+    left: 25%;
     position: relative;
 }
-    .submitReserveFormButton {
-        background-color: #FFFF99;
-       color: black;
-       left: 22em;
-    }
+.submitReserveFormButton {
+    margin-top: 10px;
+    background-color: #FFFF99;
+    color: black;
+    left: 30%
+}
 
 .cancelReserveFormButton {
+    margin-top: 10px;
     background-color: lightgrey;
     color: black;
-    left: 8em;
+    float: left;
 }
 
 
 
 #reserveForm {
+    top: 5%;
     padding-top: 10px;
     padding-left: 10px;
     position: fixed;
     left: 10px;
     display: none;
     background-color: white;
-    height: 490px;
-    width: 460px;
+    height: 75%;
+    width: 25%;
     /*   top: 150px;
     
     display: none;
@@ -435,6 +438,16 @@ table.calculator {
 
 
 /*-------------------------------Avery stylesheet ends here------------------------------------*/
+
+
+
+
+
+
+
+
+
+
 
 
 
