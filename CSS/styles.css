@@ -22,6 +22,25 @@ element,element,..	div, p	      Selects all <div> elements and all <p> elements
     height: 25%;
     width: 25%;
 }*/
+
+table.calculator button {
+    margin-top: 10px;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+
+}
+
+textarea {
+    margin-top: 10px;
+    height: 100px;
+    width: 600px;
+}
 .button {
     color: white;
     background-color: #04AA6D;
@@ -438,27 +457,6 @@ table.calculator {
 
 
 /*-------------------------------Avery stylesheet ends here------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
