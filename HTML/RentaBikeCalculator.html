@@ -31,21 +31,21 @@
         <tr>
             <td>
                 <label for="kind">Enter What Kind of Bike You Will Be Renting:</label><br>
-                                                                                      <select name="kind" id="kind">
-                                                                                          <option value=""selected disabled>Select a type of bike</option>
-                                                                                          <option value="29">Kids_$29</option>
-                                                                                          <option value="32">Tandem-bike_$32</option>
-                                                                                          <option value="30">road-bike_$30</option>
-                                                                                          <option value="22">performance-bike_$22</option>
-                                                                                      </select> <br>
+                    <select name="kind" id="kind">
+                        <option value=""selected disabled>Select a type of bike</option>
+                        <option value="22">performance-bike ($22/hr)</option>
+						<option value="29">Kids ($29/hr)</option>
+                        <option value="30">road-bike ($30/hr)</option>
+                        <option value="32">Tandem-bike ($32/hr)</option>
+                    </select> <br>
             </td>
         </tr>
      
         <tr>
             <td>
 
-                <button type="button" name="button" id="submitBikeCalculationButton" onclick="MyFunction(), alert('Your calculation has been saved successfully. Now just press display')">Submit</button>
-                <button type="button" id="displayCalcButton" onclick="displayRecord();">Display Calculcations</button>
+                <button type="button" name="button" id="submitBikeCalculationButton" onclick="MyFunction(), alert('Your calculation has been saved successfully. Now just press DISPLAY CALCULATIONS')">Submit</button>
+                <button type="button" id="displayCalcButton" onclick="displayRecord();">Display Calculations</button>
             </td>
         </tr>
         <tr>
@@ -64,10 +64,10 @@ You can submit and display multiple combinations of bikes, hours and kinds to ge
 
 
     <br>
-    <h3 >Output
+    <h3 style="font-family: arvo, Calibri, Tahoma; font-weight: bold;">Output
         
     </h3>
-    <p id="par"></p>
+    <p id="par" style="font-family: arvo, Calibri, Tahoma;"></p>
 
     <script type="text/javascript">
 
@@ -137,5 +137,4 @@ You can submit and display multiple combinations of bikes, hours and kinds to ge
     <div id="footer"> </div>
 </body>
 </html>
-
 
