@@ -40,6 +40,8 @@ textarea {
     margin-top: 10px;
     height: 100px;
     width: 600px;
+	resize: none;
+	font-family: arvo, Calibri, Tahoma; 
 }
 .button {
     color: white;
@@ -457,14 +459,6 @@ table.calculator {
 
 
 /*-------------------------------Avery stylesheet ends here------------------------------------*/
-
-
-
-
-
-
-
-
 
 
 
