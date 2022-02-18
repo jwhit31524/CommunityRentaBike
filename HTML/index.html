@@ -19,61 +19,61 @@
     <meta name="description" content="Community Rent-a-Bike">
 </head>
 <body onload="moveText">
-
+    <script src="../JavaScript/script.js"></script>
 
     <script>
-        //create a canvas for moving text
-        var canvas = document.createElement("canvas");
-        var context = canvas.getContext("2d");
+            //create a canvas for moving text
+            var canvas = document.createElement("canvas");
+            var context = canvas.getContext("2d");
 
-        canvas.width = 1900;
-        canvas.height = 50;
+            canvas.width = 1900;
+            canvas.height = 50;
 
-        document.body.appendChild(canvas);
+            document.body.appendChild(canvas);
 
-        context.fillStyle = "#04AA6D";
-
-      
-          onload="moveText"
-        var posX = 200;
-        var posY = 200;
-        dx = 1;  //creates movement for text
-        dy = 0;
-
-        setInterval(function moveText() {
             context.fillStyle = "#04AA6D";
 
-            context.fillRect(0, 0, canvas.width, canvas.height);
 
-            posX += dx;
-            posY += dy;
+              onload="moveText"
+            var posX = 200;
+            var posY = 200;
+            dx = 1;  //creates movement for text
+            dy = 0;
 
-            if (posX >= canvas.width) {
-                dx = 0;
-                posX = canvas.width;
-            }
-            if (posX < 0) {
-                dx = 0;
-                posX = 0;
-            }
-            if (posY > canvas.height) {
-                dy = 0;
-                posY = canvas.height;
-            }
-            if (posY < 0) {
-                dy = 0;
-                posY = 0;
-            }
+            setInterval(function moveText() {
+                context.fillStyle = "#04AA6D";
 
-            context.fillStyle = "white";
-            context.font = "bold 26px Calibri";
-            context.fillText("Call Us today at 517-555-5392", posX, posY);
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                posX += dx;
+                posY += dy;
+
+                if (posX >= canvas.width) {
+                    dx = 0;
+                    posX = canvas.width;
+                }
+                if (posX < 0) {
+                    dx = 0;
+                    posX = 0;
+                }
+                if (posY > canvas.height) {
+                    dy = 0;
+                    posY = canvas.height;
+                }
+                if (posY < 0) {
+                    dy = 0;
+                    posY = 0;
+                }
+
+                context.fillStyle = "white";
+                context.font = "bold 26px Calibri";
+                context.fillText("Call Us today at 517-555-5392", posX, posY);
 
 
-        }, 20)
-        
+            }, 20)
 
-    </script>
+
+        </script>
     <div id="header">
 
     </div>
@@ -105,39 +105,75 @@
 
     <div style="clear:both;"></div>
     <div id="header2">
+
         <h2>Welcome to Community Rent-a-Bike</h2>
-        <img src="../Images/beachBikePic.jpg" alt="logo" width="700" height="313"><br />
+        <!--<img src="../Images/beachBikePic.jpg" alt="logo" width="700" height="313"><br />-->
+        <a href="#" onMouseOver="document.BikePics.src = image2.src;"
+           onMouseOut="document.BikePics.src = image1.src;">
+            <img name="BikePics" src="../Images/beachBikePic.jpg" alt="logo" width="700" height="313" />
+        </a> <br />
+        <script>
+
+            if (document.images) {
+                var image1 = new Image();
+                image1.src = "../Images/beachBikePic.jpg";
+                var image2 = new Image();
+                image2.src = "../Images/san-francisco-bike.jpg";
+            }
+        </script>
+    
     </div>
 
-    <div style="clear:both;"></div>
+            <div style="clear:both;"></div>
 
 
-    <!--brief description of what the website is about-->
+            <!--brief description of what the website is about-- >
 
-    <div class="column">
-        <div class="container">
-            <!--updated resources path -->
+            <div class="column">
+                <div class="container2">
+                    <!--updated resources path -->
 
 
-            <div id="description">
-                <p>
-                    Hi there! If you're looking for a quality, affordable bicycle to rent, then you are at the right place.<br />
-                    Since 2010, we have been providing quality customer service and enjoyable riding experiences for the general public.<br />
-                    Check out our pricing and bike rental options today.<br />
-                    We look forward to hearing from you!<br />
-                </p>
+                    <div id="description">
+                        <p>
+                            Hi there! If you're looking for a quality, affordable bicycle to rent, then you are at the right place.<br />
+                            Since 2010, we have been providing quality customer service and enjoyable riding experiences for the general public.<br />
+                            Check out our pricing and bike rental options today.<br />
+                            We look forward to hearing from you!<br />
+                        </p>
+
+                    </div>
+                    <div class="overlay">
+
+                    </div>
+                </div>
+
+         <!--       <div class="bannerCycling">
+
+                    window.onload = rotate;
+
+                    var theAd = 0;
+                    var adImages = new Array("../Images/3 people riding bikes in field 2-17.jpg", "../Images/bike picnic pic 2-17.jpg");
+
+                    function rotate() {
+                    theAd++;
+                    if (theAd == adImages.length) {
+                    theAd = 0;
+                    }
+                    document.getElementById("adBanner").src = adImages[theAd];
+
+                    setTimeout(rotate, 3 * 1000);
+                    }
+
+
+                </div>-->
 
             </div>
-            <div class="overlay">
-
+            <div id="footer">
             </div>
-        </div>
-    </div>
-    <div id="footer">
-    </div>
 
-    <script src="modernizr.custom.05819.js"></script>
-    <script src="../JavaScript/script.js"></script>
+            <script src="modernizr.custom.05819.js"></script>
+
 
 
 </body>
