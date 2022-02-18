@@ -283,9 +283,10 @@
     <!--  the code below displays the different bike pics-->
     <div class="column">
         <div class="container">
-            <button type="button" class="button buttonTandem" onclick="showReserveForm()">Reserve a Tandem Bike</button>
+            <button type="button" class="button buttonTandem" onclick="showReserveForm()">Reserve a Tandem Bike</button><br>
+			<button class="try" id="tryme" >Try me</button>
             <!--updated resources path -->
-            <img src="../resources/tandem-bike.png" alt="Avatar" class="image">
+            <img src="../resources/tandem-bike.png" alt="Avatar" class="image" >
             <div class="overlay">
                 <div class="text">Tandem-bike</div>
             </div>
@@ -375,6 +376,47 @@
             popupWindow = window.open(url, winName, specs)
         }
     </script>
+	
+	 <!-- Ammar ans Avery part of animation code for Week 6-->
+	<script>
+var img = document.querySelector('.image');
+var btn = document.querySelector('.try');
+var rotate = false;
+var runner;
+var degrees = 0;
+
+function start(){
+document.getElementById("tryme").innerHTML = "Stop";
+    runner = setInterval(function(){
+        degrees++;
+        img.style.webkitTransform = 'rotate(' + degrees + 'deg)';
+		
+		
+    },1)
+	
+	
+	
+}
+
+
+function stop(){
+document.getElementById("tryme").innerHTML = "Try me";
+    degrees = 0;
+    clearInterval(runner);
+	img.style.webkitTransform = 'rotate(' + degrees + 'deg)';
+	
+}
+
+btn.addEventListener('click', function(){
+    if (!rotate){
+        rotate = true;
+        start();
+    } else {
+        rotate = false;
+        stop();
+    }
+})
+      </script>
 
 </body>
 <div id="footer"> </div>
