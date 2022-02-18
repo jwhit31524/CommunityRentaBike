@@ -1,8 +1,6 @@
-
 /*2 stylesheet*/
 /* 
 Selector	         Example	  Example description
-
 #id	                #firstname	  Selects the element with id="firstname"
 .class	            .intro	      Selects all elements with class="intro"
 element.class       p.intro	      Selects only <p> elements with class="intro"
@@ -12,8 +10,48 @@ element,element,..	div, p	      Selects all <div> elements and all <p> elements
 */
 
 
-/*James W and Ammar Stylesheet begin*/
+/*James K and James W styling wk 6*/
 
+.description { /*updated for index page 2-17-2022 JW*/
+    font-size: 25em;
+}
+
+.container2 { /*updated for index page 2-17-2022 JW*/
+    margin: auto;
+    width: 40%;
+    position: center;
+    position: relative;
+    border: 5px solid #04AA6D;
+    padding: 5%;
+    border-radius: 20%;
+    margin-bottom: .5%;
+    font-size: 1.4em;
+}
+/*updated for index page 2-17-2022 JW*/
+.bannerCycling {
+    margin: auto;
+    width: 40%;
+    position: center;
+    position: relative;
+   margin-top: .5%;
+    padding: .5%;
+    border-radius: 1%;
+    margin-bottom: 30%;
+    font-size: 1.4em;
+}
+/*updated for index page 2-17-2022 JW*/
+.HeaderBikePic {
+    margin: auto;
+    width: 40%;
+    position: center;
+    position: relative;
+    margin-top: .5%;
+    padding: .5%;
+    border-radius: 1%;
+    margin-bottom: 30%;
+    font-size: 1.4em;
+}
+/*James W and Ammar Stylesheet begin*/
 /*div#reservationFormDiv {
     top: 5%;
     position: fixed;
@@ -22,7 +60,6 @@ element,element,..	div, p	      Selects all <div> elements and all <p> elements
     height: 25%;
     width: 25%;
 }*/
-
 table.calculator button {
     margin-top: 10px;
     background-color: #04AA6D;
@@ -33,22 +70,23 @@ table.calculator button {
     display: inline-block;
     font-size: 16px;
     border-radius: 12px;
-
 }
 
 textarea {
     margin-top: 10px;
     height: 100px;
     width: 600px;
-	resize: none;
-	font-family: arvo, Calibri, Tahoma; 
+    resize: none;
+    font-family: arvo, Calibri, Tahoma;
 }
+
 .button {
     color: white;
     background-color: #04AA6D;
     left: 25%;
     position: relative;
 }
+
 .submitReserveFormButton {
     margin-top: 10px;
     background-color: #FFFF99;
@@ -84,6 +122,7 @@ textarea {
     /*   justify-content: center;
     align-items: center;*/
 }
+
 div#headerJ {
     position: relative;
     width: 100%;
@@ -91,7 +130,6 @@ div#headerJ {
     background-color: #04AA6D;
     top: 0;
     margin-bottom: 5px;
-   
 }
 
 
@@ -135,19 +173,7 @@ body {
             color: white;
         }
 
-.description { /*updated for infex page 2-17-2022 JW*/
-    font-size: 25em;
-}
-.container2 { /*updated for infex page 2-17-2022 JW*/
-    margin: auto;
-    width: 40%;
-    position: relative;
-    border: 5px solid #04AA6D;
-    padding: 5%;
-    border-radius: 20%;
-    margin-bottom: 30%;
-    font-size: 1.4em;
-}
+
 
 .container {
     margin: auto;
@@ -166,7 +192,7 @@ body {
 }
 
 .overlay {
-/*    position: absolute;
+    /*    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -224,7 +250,6 @@ div#footer {
 
 
 /* 
-
 /* James Kaalakea starts here*/
 
 /*Reset rules*/
@@ -471,6 +496,4 @@ table.calculator {
 
 
 /*-------------------------------Avery stylesheet ends here------------------------------------*/
-
-
 
