@@ -135,7 +135,19 @@ body {
             color: white;
         }
 
-
+.description { /*updated for infex page 2-17-2022 JW*/
+    font-size: 25em;
+}
+.container2 { /*updated for infex page 2-17-2022 JW*/
+    margin: auto;
+    width: 40%;
+    position: relative;
+    border: 5px solid #04AA6D;
+    padding: 5%;
+    border-radius: 20%;
+    margin-bottom: 30%;
+    font-size: 1.4em;
+}
 
 .container {
     margin: auto;
