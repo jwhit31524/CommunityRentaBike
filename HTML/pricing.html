@@ -34,6 +34,11 @@
     <div class="calculatorButton">
         <p>Trying to plan your rentals? Use our provided price quoting calculator by clicking the "calculate" button below! Please ensure that your browser supports pop ups in order to properly experience this site function.</p>
         <button type="button"><a href="RentaBikeCalculator.html" onclick="Popup(this.href,'myWindow','800','650','yes');return false">Calculate</a></button>
+		<div class="container3">
+		<p class="try" id="tryme" >Try me</p>
+            <!--updated resources path -->
+            <img src="../resources/bike_wheel-5121.png" id="tryme" alt="Avatar" class="image" >
+			</div>
     </div><hr>
 
 
@@ -281,10 +286,12 @@
     </script>
     <!--------------------------------------------------------------------------->
     <!--  the code below displays the different bike pics-->
-    <div class="column">
+    
+	
+	<div class="column">
         <div class="container">
             <button type="button" class="button buttonTandem" onclick="showReserveForm()">Reserve a Tandem Bike</button><br>
-			<button class="try" id="tryme" >Try me</button>
+			<!-- <button class="try" id="tryme" >Try me</button> -->
             <!--updated resources path -->
             <img src="../resources/tandem-bike.png" alt="Avatar" class="image" >
             <div class="overlay">
@@ -380,7 +387,7 @@
 	 <!-- Ammar ans Avery part of animation code for Week 6-->
 	<script>
 var img = document.querySelector('.image');
-var btn = document.querySelector('.try');
+var btn = document.querySelector('.image');
 var rotate = false;
 var runner;
 var degrees = 0;
@@ -389,15 +396,11 @@ function start(){
 document.getElementById("tryme").innerHTML = "Stop";
     runner = setInterval(function(){
         degrees++;
-        img.style.webkitTransform = 'rotate(' + degrees + 'deg)';
-		
+        img.style.webkitTransform = 'rotate(' + degrees + 'deg)';	
 		
     },1)
 	
-	
-	
 }
-
 
 function stop(){
 document.getElementById("tryme").innerHTML = "Try me";
