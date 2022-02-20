@@ -27,6 +27,19 @@ element,element,..	div, p	      Selects all <div> elements and all <p> elements
     margin-bottom: .5%;
     font-size: 1.4em;
 }
+/* Ammar & Avery Pricing Page spining wheel */
+
+.container3 {
+    float: right;
+    width: 200px;  
+}
+.container3 .try {
+    color: #04AA6D;
+    background-color: 0.0;
+    left: 25%;
+    position: relative;
+}
+
 /*updated for index page 2-17-2022 JW*/
 .bannerCycling {
     margin: auto;
