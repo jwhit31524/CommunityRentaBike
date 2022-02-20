@@ -205,17 +205,17 @@ body {
 }
 
 .overlay {
-    /*    position: absolute;
-    top: 0;
+    position: absolute;
+    top: 10;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    height: 90%;
     width: 100%;
     opacity: 0;
     transition: .5s ease;
     background-color: #04AA6D;
-    border-radius: 25px;*/
+    border-radius: 25px;
 }
 
 .container:hover .overlay {
