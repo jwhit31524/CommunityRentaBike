@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Event Registration</title>
+
+    <!--
+        Community Rent-A-Bike,Home Page
+        Filename: RegistrationForm.html
+        Author: Avery Garant
+        Date: 2/24/2022
+    -->
+
+    <link type="text/css" rel="stylesheet" href="../CSS/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Community Rent-a-Bike">
+
+</head>
+<body>
+    <div class="container1">
+        <div class="topnav">
+
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a class="active" href="rentabike.html">Rent a Bike</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="RegistrationForm.html">Event Registration</a>
+
+        </div>
+        <br>
+        <article style="background-color: white;min-height: 800px;">
+            <h2>Event Registration</h2>
+            <hr>
+            <p>Use the form below to sign up for upcoming community events! Please fill in all required fields that are marked with an asterik (*).</p>
+            <p style="font-size: 1.2em;">Already signed up? See the completed registrations <a href="RegistrationResults.html">HERE</a></p>
+            <div class="regform">
+                <form action="RegistrationResults.html">
+                    <fieldset class="groupinfo">
+                        <legend>Group Information</legend>
+                        <p style="text-align:left; font-size: 1.2em"><i>Please enter the name of one group member for the group to be booked under.</i></p><br>
+                        <label for="fnameinput">
+                            First Name
+                            <input type="text" name="fname" id="fnameinput" placeholder="First name">
+                        </label>
+                        <label for="lnameinput">
+                            Last Name *
+                            <input type="text" name="lname" id="lnameinput" placeholder="Last name" required>
+                        </label>
+                        <label for="groupamount">
+                            How many group members are participating? *
+                            <select name="groupamount" id="groupamount" required>
+                                <option value="G0" disabled selected>##</option>
+                                <option value="G1">1</option>
+                                <option value="G2">2</option>
+                                <option value="G3">3</option>
+                                <option value="G4">4</option>
+                                <option value="G5">5</option>
+                                <option value="G6">6</option>
+                                <option value="G7">7</option>
+                                <option value="G8">8</option>
+                                <option value="G9">9</option>
+                                <option value="G10">10</option>
+                            </select>
+                        </label>
+                    </fieldset>
+                    <fieldset class="eventinfo">
+                        <legend>Event Information</legend>
+                        <label for="eventtype">
+                            Which event are you registering for? *
+                            <select name="eventtype" id="eventtype" required>
+                                <option value="E0" disabled selected>Event</option>
+                                <option value="E1">5km Race</option>
+                                <option value="E2">Half Marathon Race</option>
+                                <option value="E3">Marathon Race</option>
+                                <option value="E4">City Tour Ride</option>
+                            </select>
+                        </label>
+                        <label for="cityselect">
+                            Which city are you participating in? *
+                            <select name="cityselect" id="cityselect" required>
+                                <option value="C0" disabled selected>City</option>
+                                <option value="C1">Detroit</option>
+                                <option value="C2">Grand Rapids</option>
+                                <option value="C3">Lansing</option>
+                                <option value="C4">Traverse City</option>
+                                <option value="C5">Holland</option>
+                                <option value="C6">Novi</option>
+                            </select>
+                        </label>
+                        <label for="dateselect">
+                            Which date and time slot are you joining? *
+                            <select name="dateselect" id="dateselect" required>
+                                <option value="d0" disabled selected>Date & Time</option>
+                                <option value="D1">March 19, 2022 (12pm)</option>
+                                <option value="D2">March 20, 2022 (8am)</option>
+                                <option value="D3">March 20, 2022 (12pm)</option>
+                                <option value="D4">March 26, 2022 (8am)</option>
+                                <option value="D5">March 26, 2022 (12pm)</option>
+                                <option value="D6">March 27, 2022 (12pm)</option>
+                            </select>
+                        </label>
+                    </fieldset>
+                    <fieldset class="Regsubmitbutton">
+                        <input type="submit" onclick="Registrant" id="Regsubmit" value="Submit">
+                    </fieldset>
+                </form>
+
+                <div>
+                    <p id="par1">
+
+                    </p>
+                </div>
+
+
+                <br>
+                <br>
+            </div>
+        </article>
+    </div>
+    <br>
+    <div id="footer">
+    </div>
+    <script>
+
+       
+        const registrantArray = [];
+
+        var firstName = document.getElementById('fnameinput').value;
+        var lastName = document.getElementById('lnameinput').value;
+        var groupAmount = document.getElementById('groupamount').value;
+        var eventType = document.getElementById('eventtype').value;
+        var citySelect = document.getElementById('cityselect').value;
+        var dateSelect = document.getElementById('dateselect').value;
+
+
+        function Registrant(firstname, lastname, groupamount, eventtype, cityselect, dateselect) {
+
+            this.firstName = firstname;
+            this.lastName = lastname;
+            this.groupAmount = groupamount;
+            this.eventType = eventtype;
+            this.citySelect = cityselect;
+            this.dateSelect = dateselect;
+            this.showRegistrantInfo = displayRegistrantInfo;
+
+
+        }
+        function displayRegistrantInfo() {
+        
+             var summ2 = document.getElementById("firstName1");
+              summ.innerHTML = (this.firstName);
+
+
+
+
+        }
+
+          var registrantData = new Registrant(firstName, lastName, groupAmount, eventType, citySelect, dateSelect);
+      
+        registrantData.showRegistrantInfo();
+
+
+    </script>
+    <script src="../JavaScript/modernizr.custom.05819.js"></script>
+</body>
+</html>
