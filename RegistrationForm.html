@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,6 +18,8 @@
 
 </head>
 <body>
+
+
     <div class="container1">
         <div class="topnav">
 
@@ -35,7 +37,9 @@
             <p>Use the form below to sign up for upcoming community events! Please fill in all required fields that are marked with an asterik (*).</p>
             <p style="font-size: 1.2em;">Already signed up? See the completed registrations <a href="RegistrationResults.html">HERE</a></p>
             <div class="regform">
-                <form action="RegistrationResults.html">
+                <form id="form1">
+                    <!--     onsubmit="return Registrant()"-->
+                    <!--action="RegistrationResults.html"-->
                     <fieldset class="groupinfo">
                         <legend>Group Information</legend>
                         <p style="text-align:left; font-size: 1.2em"><i>Please enter the name of one group member for the group to be booked under.</i></p><br>
@@ -101,8 +105,9 @@
                             </select>
                         </label>
                     </fieldset>
+    <!--                <button type="button" id="Regsubmit1" onclick="new Registrant(document.getElementById('fnameinput').value, document.getElementById('lnameinput').value, document.getElementById('groupamount').value, document.getElementById('eventtype').value, document.getElementById('cityselect').value, document.getElementById('dateselect').value), RegistrantC()"></button>-->
+                    <button type="button" id="Regsubmit1" onclick="new Registrant(firstName1, lastName, groupAmount, eventType, citySelect, dateSelect);"></button>
                     <fieldset class="Regsubmitbutton">
-                        <input type="submit" onclick="Registrant" id="Regsubmit" value="Submit">
                     </fieldset>
                 </form>
 
@@ -121,46 +126,69 @@
     <br>
     <div id="footer">
     </div>
+
     <script>
-
        
-        const registrantArray = [];
 
-        var firstName = document.getElementById('fnameinput').value;
-        var lastName = document.getElementById('lnameinput').value;
-        var groupAmount = document.getElementById('groupamount').value;
-        var eventType = document.getElementById('eventtype').value;
-        var citySelect = document.getElementById('cityselect').value;
-        var dateSelect = document.getElementById('dateselect').value;
+        // const registrantArray = [];
+   
 
 
-        function Registrant(firstname, lastname, groupamount, eventtype, cityselect, dateselect) {
+        class Registrant {
+      firstName1 = document.getElementById('fnameinput').value;
+      lastName = document.getElementById('lnameinput').value;
+       groupAmount = document.getElementById('groupamount').value;
+      eventType = document.getElementById('eventtype').value;
+       citySelect = document.getElementById('cityselect').value;
+      dateSelect = document.getElementById('dateselect').value;
 
-            this.firstName = firstname;
-            this.lastName = lastname;
-            this.groupAmount = groupamount;
-            this.eventType = eventtype;
-            this.citySelect = cityselect;
-            this.dateSelect = dateselect;
-            this.showRegistrantInfo = displayRegistrantInfo;
+            Registrant(firstname, lastname, groupamount, eventtype, cityselect, dateselect) {
+                window.alert("Registrant function is running");
+
+                this.firstName1 = firstname;
+                this.lastName = lastname;
+                this.groupAmount = groupamount;
+                this.eventType = eventtype;
+                this.citySelect = cityselect;
+                this.dateSelect = dateselect;
+
+                console.log(firstName1);
+
+                var summ2 = document.getElementById("par1");
+                //summ2.innerHTML = this.firstName1;
+
+                summ2.innerHTML = "test";
+                //this.showRegistrantInfo = displayRegistrantInfo;
+                //displayRegistrantInfo();
+
+                console.log(this.firstName1);
+
+            }
+   
+            //  displayRegistrantInfo() {
+
+            // var summ2 = document.getElementById("firstName1");
+            //  summ2.value = "hello there";
+
+
+
+
+
+
+
+            // }
+
+
+
 
 
         }
-        function displayRegistrantInfo() {
-        
-             var summ2 = document.getElementById("firstName1");
-              summ.innerHTML = (this.firstName);
+               //var a = new Registrant(firstName1, lastName, groupAmount, eventType, citySelect, dateSelect);
 
+               // var registrantData = new Registrant(firstName1, lastName, groupAmount, eventType, citySelect, dateSelect);
+                //  console.log(firstName1);
 
-
-
-        }
-
-          var registrantData = new Registrant(firstName, lastName, groupAmount, eventType, citySelect, dateSelect);
-      
-        registrantData.showRegistrantInfo();
-
-
+               // console.log(registrantData.firstName1);
     </script>
     <script src="../JavaScript/modernizr.custom.05819.js"></script>
 </body>
