@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>Event Registration</title>
+
+    <!--
+        Community Rent-A-Bike,Home Page
+        Filename: RegistrationForm.html
+
+        Author: Avery Garant
+        Date: 2/24/2022
+    -->
+
+    <link type="text/css" rel="stylesheet" href="../CSS/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Community Rent-a-Bike">
+	<script src="modernizr.custom.05819.js"></script>
+</head>
+<body onload="go();">
+     <div id="headerJ"> </div>
+	<div class="container1">
+		<div class="topnav">
+
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="rentabike.html">Rent a Bike</a>
+            <a href="contact.html">Contact Us</a>
+			<a href="RegistrationForm_A.html">Event Registration</a>
+			<a class="active" href="RegistrationResults_A.html">Registration Results</a>
+			
+
+        </div>
+        <br>
+
+
+    <table id="table2" border="1">
+
+        <!-- The Row Number 0 -->
+        <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Group Amount</th>
+				<th>Event Type</th>
+				<th>City Select</th>
+                <th>Date Select</th>   
+        </tr>
+
+    </table>
+
+
+
+    <script>
+       // function getData() {
+         
+      //  }
+
+      
+
+
+        function go() {
+          
+            var newArray1 = JSON.parse(localStorage.getItem('newArray1'));
+            //alert(newArray1);
+
+            table2 = document.getElementById("table2");
+
+
+
+            for (var i = 0; i < newArray1.length; i++) {
+                // create a new row
+                var newRow = table2.insertRow(table2.length);
+                for (var j = 0; j < newArray1[i].length; j++) {
+                    // create a new cell
+                    var cell = newRow.insertCell(j);
+
+                    // add value to the cell
+                    cell.innerHTML = newArray1[i][j];
+                }
+            }
+        }
+        function clearData() {
+            localStorage.clear();
+        }
+      
+
+    </script>
+</body>
+</html>
