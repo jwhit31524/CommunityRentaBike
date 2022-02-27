@@ -9,6 +9,30 @@ element	              p	          Selects all <p> elements
 element,element,..	div, p	      Selects all <div> elements and all <p> elements 
 */
 
+/*wk 7 JW styling for buttons*/
+#submitRegButton {
+    margin-top: 10px;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+#seeRegResultsButton {
+    margin-top: 10px;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
 
 /*James K and James W styling wk 6*/
 
