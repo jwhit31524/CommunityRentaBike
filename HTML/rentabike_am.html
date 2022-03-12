@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Community Rent-A-Bike</title>
+    <!--
+        Community Rent-A-Bike, Bike Rental Page
+        Filename: rentabike.html
+
+        Author: Avery Garant
+        Date: 1/29/2022
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--Updated CSS Path -->
+<!--    <link rel="stylesheet" href="../CSS/a_styles.css">-->
+    <link type="text/css" rel="stylesheet" href="../CSS/styles.css">
+	<style>
+	input[type=text]:focus {
+  background-color: #ffd969;
+border-color: #000;}
+
+.acenter {
+  margin-left: auto;
+margin-right: auto;}
+</style>
+ <!--   <link rel="stylesheet" href="../CSS/styles.css">-->
+<!--    <script src="a_javascript.js"></script>-->
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+    <div id="headerJ">
+    </div>
+
+    <div class="container1">
+        <!-- <header>
+         <h1 style="font-family: arvo, Calibri, Tahoma;">Community Rent-A-Bike</h1>
+     </header>-->
+        <div class="topnav">
+
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a class="active" href="rentabike.html">Rent a Bike</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="RegistrationForm_A.html">Event Registration</a>
+
+        </div>
+        <br>
+        <article>
+            <form action="successfulReservation.html";" id="Application" method="post" onsubmit="return ValidateForm(this);">
+
+<table border="0" cellpadding="5" cellspacing="0" class="acenter">
+
+
+<tr> <td style="width: 50%">
+<label for="First_Name"><b>First name *</b></label><br />
+<input name="First_Name" type="text" id=a maxlength="25" style="width:100%;max-width: 190px" />
+</td> <td style="width: 50%">
+<label for="Last_Name"><b>Last name *</b></label><br />
+<input name="Last_Name" type="text" maxlength="25" style="width:100%;max-width: 190px" />
+</td> </tr> 
+
+<tr> <td colspan="2">
+<label for="Email_Address"><b>Email *</b></label><br />
+<input name="Email_Address" type="text" maxlength="100" style="width:100%;max-width: 535px" />
+</td> </tr>
+
+
+<tr> <td>
+<label for="StartDate"><b>Pick your Start Day</b></label><br />
+<input name="StartDate" type="date" maxlength="50" style="width:100%;max-width: 260px" />
+</td> </tr>
+
+<tr> <td>
+<label for="Phone"><b>Phone *</b></label><br />
+<input name="Phone" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+</td> </tr> 
+
+<tr> <td colspan="2">
+<label for="Relocate"><b>Length of Rental</b></label><br />
+<input name="Relocate" type="radio" value="Two Hour Pass" checked="checked" /> Two Hour Pass      
+<input name="Relocate" type="radio" value="Four Hour Pass" /> Four Hour Pass      
+<input name="Relocate" type="radio" value="Six Hour Pass" /> Six Hour Pass
+<input name="Relocate" type="radio" value="All Day" /> All Day
+</td> </tr><br />
+<br>
+<tr><td colspan="2">
+                                <label for="Relocate"><b>City</b></label><br />
+                                
+                               <select id="cityselectid" name="cityselect" >
+							   <option value=""></option>
+                                    <option value="grandrapids">Grand Rapids</option>
+                                    <option value="lansing">Lansing</option>
+                                    <option value="detroit">Detroit</option>
+
+                                </select></td> </tr>
+                            
+
+<tr> <td colspan="2">
+<label for="Reference"><b>Comments / Questions</b></label><br />
+<textarea name="Reference" rows="7" cols="40" style="width:100%;max-width: 535px"></textarea>
+</td> </tr>
+
+ <tr> <td colspan="2">
+<label for="file"><b>Upload your Driver License</b></label><br />
+<input type="file" name="file">
+</td> </tr>
+
+<tr> <td colspan="2" style="text-align: center;">
+
+<input name="skip_submit" type="submit" value="Submit Request" />
+</td> </tr>
+</table>
+</form>
+
+            <br>
+            <h2 style="text-align: center;">Browse where you can ride!</h2>
+            <br>
+            <div class="grid">
+                <table style="margin-left:auto;margin-right:auto;">
+                    <tr>
+                        <td style="padding:25px">
+                            <a class="overlay1" href="https://visitgrandrapids.com/" target="_blank"><img src="../Images/grandrapids.jpg" alt="Grand Rapids" width="300" height="200"></a>
+                            <figcaption>Grand Rapids</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://visitdetroit.com/" target="_blank"><img src="../Images/detroit.jpg" alt="Detroit" width="300" height="200"></a>
+                            <figcaption>Detroit</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.traversecity.com/" target="_blank"><img src="../Images/traverse.jpg" alt="Travese City" width="300" height="200"></a>
+                            <figcaption>Traverse City</figcaption>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:25px">
+                            <a href="https://www.lansing.org/plan-your-trip/" target="_blank"><img src="../Images/lansing.jpg" alt="Lansing" width="300" height="200"></a>
+                            <figcaption>Lansing</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.holland.org/" target="_blank"><img src="../Images/holland.jpg" alt="Holland" width="300" height="200"></a>
+                            <figcaption>Holland</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.michigan.org/city/novi#?c=44.4299:-85.1166:6&tid=1186&page=0&pagesize=20&pagetitle=Novi" target="_blank"><img src="../Images/novi.jpg" alt="Novi" width="300" height="200"></a>
+                            <figcaption>Novi</figcaption>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+        <br>
+        <!--  <footer>
+          <p class="view">This site is best viewed in Chrome or Firefox</p>
+      </footer>-->
+        <div id="footer">
+        </div>
+    </div>
+    <!--  updating js reference-->
+    <script src="../JavaScript/script.js"></script>
+	<script>
+	function ValidateForm(frm) {
+  if (frm.First_Name.value == "") {
+    alert('First name is required.');
+    frm.First_Name.focus();
+    return false;
+  }
+  if (frm.Last_Name.value == "") {
+    alert('Last name is required.');
+    frm.Last_Name.focus();
+    return false;
+  }
+  if (frm.Email_Address.value == "") {
+    alert('Email address is required.');
+    frm.Email_Address.focus();
+    return false;
+  }
+  if (frm.Email_Address.value.indexOf("@") < 1 || frm.Email_Address.value.indexOf(".") < 1) {
+    alert('Please enter a valid email address.');
+    frm.Email_Address.focus();
+    return false;
+  }
+  if (frm.StartDate.value == "") {
+    alert('Start Date is required.');
+    frm.StartDate.focus();
+    return false;
+  }
+  if (frm.Phone.value == "") {
+    alert('Phone is required.');
+    frm.Phone.focus();
+    return false;
+  }
+  
+  if (frm.cityselect.value == "") {
+    alert('City is required.');
+    frm.cityselect.focus();
+    return false;
+  }
+  return true;
+}
+</script>
+</body>
+</html>
