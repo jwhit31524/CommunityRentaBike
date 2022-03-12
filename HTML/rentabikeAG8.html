@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Community Rent-A-Bike</title>
+    <!--
+        Community Rent-A-Bike, Bike Rental Page
+        Filename: rentabikeAG8.html
+
+        Author: Avery Garant
+        Date: 1/29/2022
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--Updated CSS Path -->
+<!--    <link rel="stylesheet" href="../CSS/a_styles.css">-->
+    <link type="text/css" rel="stylesheet" href="../CSS/styles.css">
+ <!--   <link rel="stylesheet" href="../CSS/styles.css">-->
+<!--    <script src="a_javascript.js"></script>-->
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+    <div id="headerJ">
+    </div>
+
+    <div class="container1">
+        <!-- <header>
+         <h1 style="font-family: arvo, Calibri, Tahoma;">Community Rent-A-Bike</h1>
+     </header>-->
+        <div class="topnav">
+
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a class="active" href="rentabike.html">Rent a Bike</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="RegistrationForm_A.html">Event Registration</a>
+
+        </div>
+        <br>
+        <article>
+            <div class="overlap">
+                <!--	Updated Images path -->
+                <img src="../Images/RentPageImg.jpg" alt="scene" style="width: 408px;height: 612px;float:left;padding: 15px;">
+				<aside class="sideform">
+				<form name="search" action="" onsubmit="return validateForm()" method="post">
+				<fieldset class="rentform">
+				<legend style="font-size:28px;text-align:center;margin-bottom:0px;">RENTAL FORM</legend>
+				<input type="reset" id="reset" value="Clear Form" style="float:right;">
+					<legend style="display:block;padding-top:10px;margin-top:20px;">Contact Information</legend>
+					<hr>
+					<label for="fnameinput" style="display: block;position: relative;margin: 1em 0;">
+					First Name
+					<input type="text" name="fname" id="fnameinput" placeholder="First name">
+					</label>
+					<label for="lnameinput" style="display: block;position: relative;margin: 1em 0;">
+						Last Name
+						<input type="text" name="lname" id="lnameinput" placeholder="Last name">
+					</label>
+					<label for="emailinput" style="display: block;position: relative;margin: 1em 0;">
+						Email
+						<input type="Email" name="email" id="emailinput" placeholder="address@example.com">
+					</label>
+					<label for="phoneinput" style="display: block;position: relative;margin: 1em 0;">
+						Phone
+						<input type="tel" name="phone" id="phoneinput">
+					</label>
+					<legend style="padding-top:10px;">Rental Period</legend>
+					<hr>
+					<input type="radio" name="option" id="2hoursinput">
+					<label for="2hoursinput">2 hour period</label>
+					<input type="radio" name="option" id="4hoursinput">
+					<label for="4hoursinput">4 hour period</label>
+					<input type="radio" name="option" id="6hoursinput">
+					<label for="2hoursinput">6 hour period</label>
+					<input type="radio" name="option" id="fulldayinput">
+					<label for="fulldayinput">Full Day</label>
+					<legend style="padding-top:10px;">Rental Location</legend>
+					<hr>
+					<select name="cityoptions" id="cityinput" style="padding:5px;" required>
+                        <option value="" selected disabled>Choose a City to Ride in</option>
+                        <option value="GR">Grand Rapids</option>
+                        <option value="Lansing">Lansing</option>
+                        <option value="Detroit">Detroit</option>
+                        <option value="Holland">Holland</option>
+                        <option value="Novi">Novi</option>
+                        <option value="Traverse">Traverse City</option>
+                    </select>
+					<legend style="padding-top:10px;">Number and Type of Bike</legend>
+					<hr>
+					<input type="checkbox" name="bikeoption" id="tandem">
+					<label for="tandem">
+						<select name="numbikes" id="rentnumbikes">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					Tandem
+					</label>
+					<input type="checkbox" name="bikeoption" id="performance">
+					<label for="performance">
+						<select name="numbikes" id="rentnumbikes">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					Performance
+					</label>
+					<input type="checkbox" name="bikeoption" id="road">
+					<label for="road">
+						<select name="numbikes" id="rentnumbikes">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					Road
+					</label>
+					<input type="checkbox" name="bikeoption" id="comfort">
+					<label for="comfort">
+						<select name="numbikes" id="rentnumbikes">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					Comfort
+					</label>
+					<input type="checkbox" name="bikeoption" id="kids">
+					<label for="kids">
+					<select name="numbikes" id="rentnumbikes">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					Kids
+					</label>
+					<br>
+					<input type="submit" id="submit" value="Submit" style="margin-top:20px;">
+				</fieldset>
+				</aside>
+				</form>
+            </div>
+            <br>
+            <h2 style="text-align: center; display:block; padding-top:10px;">Browse where you can ride!</h2>
+            <br>
+            <div class="grid">
+                <table style="margin-left:auto;margin-right:auto;">
+                    <tr>
+                        <td style="padding:25px">
+                            <a class="overlay1" href="https://visitgrandrapids.com/" target="_blank"><img src="../Images/grandrapids.jpg" alt="Grand Rapids" width="300" height="200"></a>
+                            <figcaption>Grand Rapids</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://visitdetroit.com/" target="_blank"><img src="../Images/detroit.jpg" alt="Detroit" width="300" height="200"></a>
+                            <figcaption>Detroit</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.traversecity.com/" target="_blank"><img src="../Images/traverse.jpg" alt="Travese City" width="300" height="200"></a>
+                            <figcaption>Traverse City</figcaption>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:25px">
+                            <a href="https://www.lansing.org/plan-your-trip/" target="_blank"><img src="../Images/lansing.jpg" alt="Lansing" width="300" height="200"></a>
+                            <figcaption>Lansing</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.holland.org/" target="_blank"><img src="../Images/holland.jpg" alt="Holland" width="300" height="200"></a>
+                            <figcaption>Holland</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.michigan.org/city/novi#?c=44.4299:-85.1166:6&tid=1186&page=0&pagesize=20&pagetitle=Novi" target="_blank"><img src="../Images/novi.jpg" alt="Novi" width="300" height="200"></a>
+                            <figcaption>Novi</figcaption>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+        <br>
+        <!--  <footer>
+          <p class="view">This site is best viewed in Chrome or Firefox</p>
+      </footer>-->
+        <div id="footer">
+        </div>
+    </div>
+    <!--  updating js reference-->
+    <script src="../JavaScript/script.js"></script>
+	<script>
+		"use strict"
+		function validateForm() {
+		  let fname = document.forms["search"]["fname"].value;
+		  let lname = document.forms["search"]["lname"].value;
+		  let email = document.forms["search"]["email"].value;
+		  let phone = document.forms["search"]["phone"].value;
+		  if (fname == "") {
+			alert("First name must be filled out");
+			return false;
+		  }
+		  if (lname == "") {
+			alert("Last name must be filled out");
+			return false;
+		  }
+		  if (email == "") {
+			alert("Email must be filled out");
+			return false;
+		  }
+		  if (phone == "") {
+			alert("Phone must be filled out");
+			return false;
+		  }
+		  
+		  
+		  
+		}
+	</script>
+</body>
+</html>
