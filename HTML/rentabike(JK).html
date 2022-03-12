@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Community Rent-A-Bike</title>
+    <!--
+        Community Rent-A-Bike, Bike Rental Page
+        Filename: rentabike.html
+
+        Author: Avery Garant
+        Date: 1/29/2022
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--Updated CSS Path -->
+<!--    <link rel="stylesheet" href="../CSS/a_styles.css">-->
+    <link type="text/css" rel="stylesheet" href="../CSS/styles.css">
+ <!--   <link rel="stylesheet" href="../CSS/styles.css">-->
+<!--    <script src="a_javascript.js"></script>-->
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+<body onload='document.RentalPeriodForm.text12.focus();'>
+    <div id="headerJ">
+    </div>
+
+    <div class="container1">
+        <!-- <header>
+         <h1 style="font-family: arvo, Calibri, Tahoma;">Community Rent-A-Bike</h1>
+     </header>-->
+        <div class="topnav">
+
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a class="active" href="rentabike.html">Rent a Bike</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="RegistrationForm_A.html">Event Registration</a>
+
+        </div>
+        <br>
+        <article>
+            <div class="overlap">
+                <!--	Updated Images path -->
+                <img src="../Images/Scenic_Bike_Paths_header1.jpg" alt="scene" style="width:100%;">
+							
+				<form name="RentalPeriodForm" action="#" method=post>
+				
+					<fieldset class="RentalPeriod">
+					<legend>Rental Period</legend>
+					<select name="cities" id="cities" required>
+                        <option selected disabled>Choose a City to Ride in</option>
+                        <option value="GR">Grand Rapids</option>
+                        <option value="Lansing">Lansing</option>
+                        <option value="Detroit">Detroit</option>
+                        <option value="Holland">Holland</option>
+                        <option value="Novi">Novi</option>
+                        <option value="Traverse">Traverse City</option>
+                    </select>
+					
+					<!--
+                    <input type="date" id="pickup" name="pickup" required>
+                    <input type="date" id="dropoff" name="dropoff" required>
+					-->
+					
+                    <select name="bikesnum" id="bikesnum" required>
+                        <option selected disabled>How many Bikes?</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+					</fieldset>
+					<fieldset>
+					<p> Please select rental period</p>
+					<input type="radio" id="option1" name="hours12">
+					<label for="option1">1 hour</label><br>
+					<input type="radio" id="option2" name="hours12">
+					<label for="option2">2 hours</label><br>
+					<input type="radio" id="option3" name="hours12">
+					<label for="option3">3 hours</label><br>
+					<input type="radio" id="option4" name="hours12">
+					<label for="option3">4 hours</label><br>
+					<input type="radio" id="option5" name="hours12">
+					<label for="option5">5 hours</label><br>
+					<input type="radio" id="option6" name="hours12">
+					<label for="option6">6 hours</label><br>					
+					<input type="radio" id="option7" name="hours12">
+					<label for="option7">7 hours</label><br>
+					</fieldset>				
+					
+					<fieldset>
+					<p>Please enter date of rental and contact email.</p>
+					<ul>
+					<li><input type="date" id="pickup" name="pickup" required><br></li>
+					<li><input type="email" id="rentalperiodemail" name="text12" placeholder="Enter Email" required><br></li>
+					</ul>
+					</fieldset>
+					
+					<fieldset>
+					<input type="submit" id="submit" value="Submit" onclick="runthem()" onclick="ValidateEmail(document.RentalPeriodForm.text12)">
+					</fieldset>
+					
+				</form>
+				
+				<script>
+				
+				function runthem(){
+				validateRentalPeriodForm();
+				ValidateForm(form);
+				ValidateEmail(document.RentalPeriodForm.text12)
+				}								
+				
+				function validateRentalPeriodForm(){
+				var cities1 = document.getElementById('cities');
+				var date1 = document.getElementById('pickup');
+				//var rentalhours123 = document.getElementById('pickup');
+				if (cities1.value == "") {
+				return false;
+				alert("Must enter a city.");
+				}
+				if (date1.value == "") {
+				return false;
+				alert("Must enter a date");
+				}
+				}
+				
+				function ValidateForm(form){
+				ErrorText= "";
+				if ( ( form.hours12[0].checked == false ) && ( form.hours12[1].checked == false ) )
+				{
+					alert ( "Please choose your Gender: Male or Female" );
+					return false;
+				}
+					if (ErrorText= "") { form.submit() }
+				}
+
+				function ValidateEmail(inputText){
+				var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				if(inputText.value.match(mailformat))
+				{
+					alert("Valid email address!");
+					document.RentalPeriodForm.text12.focus();
+					return true;
+				}else
+				{
+					alert("You have entered an invalid email address!");
+					document.RentalPeriodForm.text12.focus();
+					return false;
+				}
+				}
+				
+				</script>
+            </div>
+            <br>
+            <h2 style="text-align: center;">Browse where you can ride!</h2>
+            <br>
+            <div class="grid">
+                <table style="margin-left:auto;margin-right:auto;">
+                    <tr>
+                        <td style="padding:25px">
+                            <a class="overlay1" href="https://visitgrandrapids.com/" target="_blank"><img src="../Images/grandrapids.jpg" alt="Grand Rapids" width="300" height="200"></a>
+                            <figcaption>Grand Rapids</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://visitdetroit.com/" target="_blank"><img src="../Images/detroit.jpg" alt="Detroit" width="300" height="200"></a>
+                            <figcaption>Detroit</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.traversecity.com/" target="_blank"><img src="../Images/traverse.jpg" alt="Travese City" width="300" height="200"></a>
+                            <figcaption>Traverse City</figcaption>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:25px">
+                            <a href="https://www.lansing.org/plan-your-trip/" target="_blank"><img src="../Images/lansing.jpg" alt="Lansing" width="300" height="200"></a>
+                            <figcaption>Lansing</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.holland.org/" target="_blank"><img src="../Images/holland.jpg" alt="Holland" width="300" height="200"></a>
+                            <figcaption>Holland</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.michigan.org/city/novi#?c=44.4299:-85.1166:6&tid=1186&page=0&pagesize=20&pagetitle=Novi" target="_blank"><img src="../Images/novi.jpg" alt="Novi" width="300" height="200"></a>
+                            <figcaption>Novi</figcaption>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+        <br>
+        <!--  <footer>
+          <p class="view">This site is best viewed in Chrome or Firefox</p>
+      </footer>-->
+        <div id="footer">
+        </div>
+    </div>
+    <!--  updating js reference-->
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>
