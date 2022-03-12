@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Community Rent-A-Bike</title>
+    <!--
+        Community Rent-A-Bike, Bike Rental Page
+        Filename: rentabike.html
+        Author: Avery Garant
+        Date: 1/29/2022
+    -->
+    "use strict"
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--Updated CSS Path -->
+    <!--    <link rel="stylesheet" href="../CSS/a_styles.css">-->
+    <link type="text/css" rel="stylesheet" href="../CSS/styles.css">
+    <!--   <link rel="stylesheet" href="../CSS/styles.css">-->
+    <!--    <script src="a_javascript.js"></script>-->
+    <script src="../JavaScript/modernizr.custom.05819.js"></script>
+</head>
+<body>
+    <div id="headerJ">
+    </div>
+
+    <div class="container1">
+        <!-- <header>
+            <h1 style="font-family: arvo, Calibri, Tahoma;">Community Rent-A-Bike</h1>
+        </header>-->
+        <div class="topnav">
+
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a class="active" href="rentabike.html">Rent a Bike</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="RegistrationForm_A.html">Event Registration</a>
+
+        </div>
+        <br>
+        <article>
+            <div class="overlap">
+                <article>
+                    <h2>Bike Rental Form</h2>
+                    <form novalidate>
+                        <fieldset id="renterInfo">
+                            <legend>Renter Information</legend>
+                            <label for="firstnameinput">First Name</label>
+                            <input type="text" id="nameinput" name="firstname" required="required" />
+                            <label for="lastnameinput">Last Name</label>
+                            <input type="text" id="nameinput" name="lastname" required="required" />
+                            <label for="emailinput">Email</label>
+                            <input type="email" id="emailinput" name="email" required="required" />
+                            <label for="phoneinput">Phone</label>
+                            <input type="text" id="phoneinput" name="phone" required="required" />
+                        </fieldset>
+                        <fieldset id="orderinfo">
+                            <legend>Order</legend>
+                            <fieldset id="rentaltimelengthradio">
+                                <legend>Length of Rental</legend>
+                                <input type="radio" name="rentallength" id="twohourpass" value="Two Hour Pass" />
+                                <label for="twohourpass">Two Hour Pass</label>
+                                <input type="radio" name="rentallength" id="fourhourpass" value="Four Hour Pass" />
+                                <label for="fourhourpass">Four Hour Pass</label>
+                                <input type="radio" name="rentallength" id="alldaypass" value="All Day Pass" />
+                                <label for="alldaypass">All Day Pass</label>
+                            </fieldset>
+                            <fieldset id="cityselect">
+                                <legend>City</legend>
+                                <select id="cityselectid" name="cityselect" required="required">
+                                    <option value="grandrapids">Grand Rapids</option>
+                                    <option value="lansing">Lansing</option>
+                                    <option value="detroit">Detroit</option>
+
+                                </select>
+                            </fieldset>
+                            <fieldset id="typeofbikeselect">
+                                <legend>Type of Bike</legend>
+                                <input type="checkbox" id="tandemchoose" name="rentalType" value="Tandem" />
+                                <label for="tandemchoose">Tandem</label>
+                                <input type="checkbox" id="performancechoose" name="rentalType" value="Performance" />
+                                <label for="performancechoose">Performance</label>
+                                <input type="checkbox" id="roadchoose" name="rentalType" value="Road" />
+                                <label for="roadchoose">Road</label>
+                                <input type="checkbox" id="comfortchoose" name="rentalType" value="Comfort" />
+                                <label for="comfortchoose">Comfort</label>
+                                <input type="checkbox" id="kidschoose" name="rentalType" value="Kids" />
+                                <label for="kidschoose">Kids</label>
+                                <label for="details" id="detailsid">Details</label>
+                                <textarea id="details" name="details" rows="3" cols="60" placeholder="Comments"></textarea>
+                            </fieldset>
+                        </fieldset>
+                        <fieldset id="rentaBikeSubmitButtonFieldSet">
+                            <input type="submit" id="rentaBikeSubmitButton" value="Submit Rental" />
+                        </fieldset>
+                    </form>
+                </article>
+            </div>
+            <br>
+            <h2 style="text-align: center;">Browse where you can ride!</h2>
+            <br>
+            <div class="grid">
+                <table style="margin-left:auto;margin-right:auto;">
+                    <tr>
+                        <td style="padding:25px">
+                            <a class="overlay1" href="https://visitgrandrapids.com/" target="_blank"><img src="../Images/grandrapids.jpg" alt="Grand Rapids" width="300" height="200"></a>
+                            <figcaption>Grand Rapids</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://visitdetroit.com/" target="_blank"><img src="../Images/detroit.jpg" alt="Detroit" width="300" height="200"></a>
+                            <figcaption>Detroit</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.traversecity.com/" target="_blank"><img src="../Images/traverse.jpg" alt="Travese City" width="300" height="200"></a>
+                            <figcaption>Traverse City</figcaption>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:25px">
+                            <a href="https://www.lansing.org/plan-your-trip/" target="_blank"><img src="../Images/lansing.jpg" alt="Lansing" width="300" height="200"></a>
+                            <figcaption>Lansing</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.holland.org/" target="_blank"><img src="../Images/holland.jpg" alt="Holland" width="300" height="200"></a>
+                            <figcaption>Holland</figcaption>
+                        </td>
+                        <td style="padding:25px">
+                            <a href="https://www.michigan.org/city/novi#?c=44.4299:-85.1166:6&tid=1186&page=0&pagesize=20&pagetitle=Novi" target="_blank"><img src="../Images/novi.jpg" alt="Novi" width="300" height="200"></a>
+                            <figcaption>Novi</figcaption>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+        <br>
+        <!--  <footer>
+            <p class="view">This site is best viewed in Chrome or Firefox</p>
+        </footer>-->
+        <div id="footer">
+        </div>
+    </div>
+    <!--  updating js reference-->
+
+    <script>
+        "use strict"
+
+        var formValidity = true;
+
+        function removeDefaultSelectOption() {
+            var selectBox = document.getElementById("cityselectid");
+            selectBox.selectedIndex = -1;
+
+        }
+        function setUpPage() {
+            removeDefaultSelectOption();
+
+
+            createEventListeners();
+        }
+
+        if (window.addEventListener) {
+            window.addEventListener("load", setUpPage, false);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent("onload", setUpPage);
+        }
+
+
+        function validateData() {
+            var inputElements = document.querySelectorAll("input[required]");
+            var elementCount = inputElements.length;
+            var currentElement;
+            var fieldsetValidity = true;
+            console.log(elementCount);
+            try {
+                for (var i = 0; i < elementCount; i++) {
+                    currentElement = inputElements[i];
+                    if (currentElement.value === "") {
+                        currentElement.style.background = "rgb(255,233,233)";
+                        fieldsetValidity = false;
+
+
+                    }
+                    else {
+                        currentElement.style.background = "white";
+                        //document.getElementsByTagName("form").submit();
+
+                    }
+
+                }
+                currentElement = document.querySelectorAll("select")[0];
+
+                var currentElement = document.getElementById("emailinput");
+                if (currentElement.value.length < 5 || currentElement.value.indexOf('@') < 0) {
+                    currentElement.style.background = "rgb(255,233,233)";
+                    fieldsetValidity = false;
+                    console.log("please enter a valid email");
+                }
+
+                else {
+                    currentElement.style.background = "white";
+
+                }
+                //var valEmail = document.getElementById("emailinput");
+
+
+                console.log(elementCount);
+                if (fieldsetValidity === false) {
+                    throw "please complete all required fields";
+                }
+            }
+            catch (msg) {
+                console.log(msg);
+
+            }
+            return fieldsetValidity;
+        }
+
+
+
+
+
+        function validateForm(evt) {  // prevents form from submitting
+            if (evt.preventDefault) {
+                evt.preventDefault();
+            }
+            else {
+                evt.returnValue = false;
+            }
+            var formValidity = validateData();
+
+            if (formValidity === true) {
+
+                document.getElementsByTagName("form")[0].submit();
+                location.href = "successfulReservation.html";
+
+            }
+            else {
+                window.alert("Please fill in the first text fields");
+            }
+
+        }
+        function createEventListeners() {
+            var bikeForm = document.getElementsByTagName("form")[0];
+            if (bikeForm.addEventListener) {
+                bikeForm.addEventListener("submit", validateForm, false);
+            }
+            else if (bikeForm.attachEvent) {
+                bikeForm.attachEvent("onsubmit", validateForm);
+            }
+        }
+
+
+    </script>
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>
