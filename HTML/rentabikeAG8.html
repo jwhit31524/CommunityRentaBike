@@ -42,7 +42,7 @@
                 <!--	Updated Images path -->
                 <img src="../Images/RentPageImg.jpg" alt="scene" style="width: 408px;height: 612px;float:left;padding: 15px;">
 				<aside class="sideform">
-				<form name="search" action="" onsubmit="return validateForm()" method="post">
+				<form name="search" action="" method="post">
 				<fieldset class="rentform">
 				<legend style="font-size:28px;text-align:center;margin-bottom:0px;">RENTAL FORM</legend>
 				<input type="reset" id="reset" value="Clear Form" style="float:right;">
@@ -173,7 +173,7 @@
 					Kids
 					</label>
 					<br>
-					<input type="submit" id="submit" value="Submit" style="margin-top:20px;">
+					<input type="submit" id="sub" value="Submit" style="margin-top:20px;">
 				</fieldset>
 				</aside>
 				</form>
@@ -250,6 +250,9 @@
 		  
 		  
 		}
+		
+		var sub=document.getElementById("sub");
+		sub.addEventListener("click",validateForm,false); 
 	</script>
 </body>
 </html>
