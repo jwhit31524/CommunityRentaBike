@@ -5,18 +5,28 @@
     <!--
         Community Rent-A-Bike, Bike Rental Page
         Filename: rentabike.html
-
-        Author: all
-        Date: 1/29/2022
+        Author: Group
+        Date: 2022
     -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 
     <!--Updated CSS Path -->
-<!--    <link rel="stylesheet" href="../CSS/a_styles.css">-->
+    <!--    <link rel="stylesheet" href="../CSS/a_styles.css">-->
     <link type="text/css" rel="stylesheet" href="../CSS/styles.css">
- <!--   <link rel="stylesheet" href="../CSS/styles.css">-->
-<!--    <script src="a_javascript.js"></script>-->
+    <style>
+        input[type=text]:focus {
+            background-color: #ffd969;
+            border-color: #000;
+        }
+
+        .acenter {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <!--   <link rel="stylesheet" href="../CSS/styles.css">-->
+    <!--    <script src="a_javascript.js"></script>-->
     <script src="modernizr.custom.05819.js"></script>
 </head>
 <body>
@@ -25,8 +35,8 @@
 
     <div class="container1">
         <!-- <header>
-         <h1 style="font-family: arvo, Calibri, Tahoma;">Community Rent-A-Bike</h1>
-     </header>-->
+            <h1 style="font-family: arvo, Calibri, Tahoma;">Community Rent-A-Bike</h1>
+        </header>-->
         <div class="topnav">
 
             <a href="index.html">Home</a>
@@ -38,39 +48,93 @@
         </div>
         <br>
         <article>
-            <div class="overlap">
-                <!--	Updated Images path -->
-                <img src="../Images/Scenic_Bike_Paths_header1.jpg" alt="scene" style="width:100%;">
+            <form action="successfulReservation.html" ;" id="Application" method="post" onsubmit="return ValidateForm(this);">
 
-                <section class='centered'>
-                    <h2>Rent a Bike from Rent-A-Bike!</h2>
-                    <select name="cities" id="cities">
-                        <option selected disabled>Choose a City to Ride in</option>
-                        <option value="GR">Grand Rapids</option>
-                        <option value="Lansing">Lansing</option>
-                        <option value="Detroit">Detroit</option>
-                        <option value="Holland">Holland</option>
-                        <option value="Novi">Novi</option>
-                        <option value="Traverse">Traverse City</option>
-                    </select>
-                    <input type="date" id="pickup" name="pickup">
-                    <input type="date" id="dropoff" name="dropoff">
-                    <select name="bikesnum" id="bikesnum">
-                        <option selected disabled>How many Bikes?</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                    <input type="submit" id="submit" value="Submit">
-                </section>
-            </div>
+                <table border="0" cellpadding="5" cellspacing="0" class="acenter">
+
+
+                    <tr>
+                        <td style="width: 50%">
+                            <label for="First_Name"><b>First name *</b></label><br />
+                            <input name="First_Name" type="text" id=a maxlength="25" style="width:100%;max-width: 190px" />
+                        </td>
+                        <td style="width: 50%">
+                            <label for="Last_Name"><b>Last name *</b></label><br />
+                            <input name="Last_Name" type="text" maxlength="25" style="width:100%;max-width: 190px" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <label for="Email_Address"><b>Email *</b></label><br />
+                            <input name="Email_Address" type="text" maxlength="100" style="width:100%;max-width: 535px" />
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <label for="StartDate"><b>Pick your Start Day</b></label><br />
+                            <input name="StartDate" type="date" maxlength="50" style="width:100%;max-width: 260px" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="Phone"><b>Phone *</b></label><br />
+                            <input name="Phone" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <label for="Relocate"><b>Length of Rental</b></label><br />
+                            <input name="Relocate" type="radio" value="Two Hour Pass" checked="checked" /> Two Hour Pass
+                            <input name="Relocate" type="radio" value="Four Hour Pass" /> Four Hour Pass
+                            <input name="Relocate" type="radio" value="Six Hour Pass" /> Six Hour Pass
+                            <input name="Relocate" type="radio" value="All Day" /> All Day
+                        </td>
+                    </tr>
+                    <br />
+                    <br>
+                    <tr>
+                        <td colspan="2">
+                            <label for="Relocate"><b>City</b></label><br />
+
+                            <select id="cityselectid" name="cityselect">
+                                <option value=""></option>
+                                <option value="grandrapids">Grand Rapids</option>
+                                <option value="lansing">Lansing</option>
+                                <option value="detroit">Detroit</option>
+
+                            </select>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2">
+                            <label for="Reference"><b>Comments / Questions</b></label><br />
+<textarea name="Reference" rows="7" cols="40" style="width:100%;max-width: 535px"></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <label for="file"><b>Upload your Driver License</b></label><br />
+                            <input type="file" name="file">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+
+                            <input name="skip_submit" type="submit" value="Submit Request" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
             <br>
             <h2 style="text-align: center;">Browse where you can ride!</h2>
             <br>
@@ -109,12 +173,53 @@
         </article>
         <br>
         <!--  <footer>
-          <p class="view">This site is best viewed in Chrome or Firefox</p>
-      </footer>-->
+            <p class="view">This site is best viewed in Chrome or Firefox</p>
+        </footer>-->
         <div id="footer">
         </div>
     </div>
     <!--  updating js reference-->
     <script src="../JavaScript/script.js"></script>
+    <script>
+	function ValidateForm(frm) {
+  if (frm.First_Name.value == "") {
+    alert('First name is required.');
+    frm.First_Name.focus();
+    return false;
+  }
+  if (frm.Last_Name.value == "") {
+    alert('Last name is required.');
+    frm.Last_Name.focus();
+    return false;
+  }
+  if (frm.Email_Address.value == "") {
+    alert('Email address is required.');
+    frm.Email_Address.focus();
+    return false;
+  }
+  if (frm.Email_Address.value.indexOf("@") < 1 || frm.Email_Address.value.indexOf(".") < 1) {
+    alert('Please enter a valid email address.');
+    frm.Email_Address.focus();
+    return false;
+  }
+  if (frm.StartDate.value == "") {
+    alert('Start Date is required.');
+    frm.StartDate.focus();
+    return false;
+  }
+  if (frm.Phone.value == "") {
+    alert('Phone is required.');
+    frm.Phone.focus();
+    return false;
+  }
+
+  if (frm.cityselect.value == "") {
+    alert('City is required.');
+    frm.cityselect.focus();
+    return false;
+  }
+  return true;
+}
+    </script>
 </body>
 </html>
