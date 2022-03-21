@@ -51,7 +51,9 @@
         <article>
 
             <form action="successfulReservation.html" ;" id="Application" method="post" onsubmit="return ValidateForm(this);">
+              <!--  wk 9 changes-->
                 <fieldset id="renterInfo">
+                    <!--  wk 9 changes-->
                     <legend>Renter Information</legend>
 
                     <table border="0" cellpadding="5" cellspacing="0" class="acenter">
@@ -217,7 +219,7 @@
     frm.Phone.focus();
     return false;
         }
-
+        /*wk 9 changes*/
         if (frm.Phone.value.length < 10) {
             alert('Please enter a valid phone number');
             frm.Phone.focus();
@@ -231,7 +233,7 @@
   }
   return true;
 }
-
+        /*wk 9 changes*/
 function countChars(textbox, counter, max) {
   var count = max - document.getElementById(textbox).value.length;
   if (count < 0) { document.getElementById(counter).innerHTML = "<span style=\"color: red;\">" + count +" /" + max + "</span>"; }
