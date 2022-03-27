@@ -23,6 +23,7 @@ img {
   max-width: 800px;
   position: relative;
   margin: auto;
+  max-height: 400px;
 }
 
 /* Next & previous buttons */
