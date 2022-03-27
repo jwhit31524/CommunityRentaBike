@@ -51,7 +51,7 @@
         <article>
 
             <form action="successfulReservation.html" ;" id="Application" method="post" onsubmit="return ValidateForm(this);">
-              <!--  wk 9 changes-->
+                <!--  wk 9 changes-->
                 <fieldset id="renterInfo">
                     <!--  wk 9 changes-->
                     <legend>Renter Information</legend>
@@ -140,42 +140,62 @@
                     </table>
                 </fieldset>
             </form>
-            
+
 
             <br>
-            <h2 style="text-align: center;">Browse where you can ride!</h2>
+
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 6</div>
+                    <a href="https://visitgrandrapids.com/"> <img src="../Images/grandrapids.jpg" style="width:100%"></a>
+                    <div class="text">Grand Rapids</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 6</div>
+                    <a href="https://visitdetroit.com/"><img src="../Images/detroit.jpg" style="width:100%"></a>
+                    <div class="text">Detroit</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 6</div>
+                    <a href="https://www.traversecity.com/"> <img src="../Images/traverse.jpg" style="width:100%"></a>
+                    <div class="text">Travese City</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 6</div>
+                    <a href="https://www.lansing.org/plan-your-trip/"> <img src="../Images/lansing.jpg" style="width:100%"></a>
+                    <div class="text">Lansing</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 6</div>
+                    <a href="https://www.holland.org/"><img src="../Images/holland.jpg" style="width:100%"></a>
+                    <div class="text">Holand</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 6</div>
+                    <a href="https://www.michigan.org/city/novi#?c=44.4299:-85.1166:6&tid=1186&page=0&pagesize=20&pagetitle=Novi"> <img src="../Images/novi.jpg" style="width:100%"></a>
+                    <div class="text">Novi</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
             <br>
-            <div class="grid">
-                <table style="margin-left:auto;margin-right:auto;">
-                    <tr>
-                        <td style="padding:25px">
-                            <a class="overlay1" href="https://visitgrandrapids.com/" target="_blank"><img src="../Images/grandrapids.jpg" alt="Grand Rapids" width="300" height="200"></a>
-                            <figcaption>Grand Rapids</figcaption>
-                        </td>
-                        <td style="padding:25px">
-                            <a href="https://visitdetroit.com/" target="_blank"><img src="../Images/detroit.jpg" alt="Detroit" width="300" height="200"></a>
-                            <figcaption>Detroit</figcaption>
-                        </td>
-                        <td style="padding:25px">
-                            <a href="https://www.traversecity.com/" target="_blank"><img src="../Images/traverse.jpg" alt="Travese City" width="300" height="200"></a>
-                            <figcaption>Traverse City</figcaption>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding:25px">
-                            <a href="https://www.lansing.org/plan-your-trip/" target="_blank"><img src="../Images/lansing.jpg" alt="Lansing" width="300" height="200"></a>
-                            <figcaption>Lansing</figcaption>
-                        </td>
-                        <td style="padding:25px">
-                            <a href="https://www.holland.org/" target="_blank"><img src="../Images/holland.jpg" alt="Holland" width="300" height="200"></a>
-                            <figcaption>Holland</figcaption>
-                        </td>
-                        <td style="padding:25px">
-                            <a href="https://www.michigan.org/city/novi#?c=44.4299:-85.1166:6&tid=1186&page=0&pagesize=20&pagetitle=Novi" target="_blank"><img src="../Images/novi.jpg" alt="Novi" width="300" height="200"></a>
-                            <figcaption>Novi</figcaption>
-                        </td>
-                    </tr>
-                </table>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
             </div>
         </article>
         <br>
@@ -239,6 +259,38 @@ function countChars(textbox, counter, max) {
   if (count < 0) { document.getElementById(counter).innerHTML = "<span style=\"color: red;\">" + count +" /" + max + "</span>"; }
   else { document.getElementById(counter).innerHTML = "<span>" + count +" /" + max + "</span>"; }
 }
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";}
 
     </script>
 </body>
