@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Community Rent-a-Bike</title>
+
+    <!--
+        Community Rent-A-Bike,Home Page
+        Filename: index.html
+        Author: James Whitton
+        Date: 1/29/2022
+    -->
+
+    <link type="text/css" rel="stylesheet" href="../CSS/styles.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="../JavaScript/responsiveslides.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Community Rent-a-Bike">
+</head>
+<body onload="moveText">
+    <script src="../JavaScript/script.js"></script>
+
+    <script>
+        //create a canvas for moving text
+        var canvas = document.createElement("canvas");
+        var context = canvas.getContext("2d");
+
+        canvas.width = 1900;
+        canvas.height = 50;
+
+        document.body.appendChild(canvas);
+
+        context.fillStyle = "#04AA6D";
+
+
+        onload = "moveText"
+        var posX = 200;
+        var posY = 200;
+        dx = 1;  //creates movement for text
+        dy = 0;
+
+        setInterval(function moveText() {
+            context.fillStyle = "#04AA6D";
+
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            posX += dx;
+            posY += dy;
+
+            if (posX >= canvas.width) {
+                dx = 0;
+                posX = canvas.width;
+            }
+            if (posX < 0) {
+                dx = 0;
+                posX = 0;
+            }
+            if (posY > canvas.height) {
+                dy = 0;
+                posY = canvas.height;
+            }
+            if (posY < 0) {
+                dy = 0;
+                posY = 0;
+            }
+
+            context.fillStyle = "white";
+            context.font = "bold 26px Calibri";
+            context.fillText("Call Us today at 517-555-5392", posX, posY);
+
+
+        }, 20)
+
+
+    </script>
+    <div id="header">
+
+    </div>
+    <div style="clear:both;"></div>
+
+
+    <!-- main navigation menu-->
+    <!--changed name to topnav instead of mainnav 2-2-2022-->
+    <!-- <nav id="topnav">
+         <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="pricing.html">Pricing</a></li>
+             <li><a href="rentabike.html">Rent a Bike</a></li>
+             <li><a href="contact.html">Contact Us</a></li>
+             <li><a href="RegistrationForm_A.html">Event Registration</a></li>
+         </ul>
+     </nav>-->
+
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="rentabike.html">Rent a Bike</a>
+
+        <!-- Updated html reference -->
+        <a href="contact.html">Contact Us</a>
+        <a href="RegistrationForm_A.html">Event Registration</a>
+    </div>
+
+
+
+    <div style="clear:both;"></div>
+    <div id="header2">
+
+        <h2>Welcome to Community Rent-a-Bike</h2>
+        <button><a href="#Cal" style="font-family: arvo, Calibri, Tahoma; justify-content: center; text-align: center;">Click Here to See Upcoming Events!</a></button>
+        <!--<img src="../Images/beachBikePic.jpg" alt="logo" width="700" height="313"><br />-->
+        <!-- James K and James W part of animation code for Week 6-->
+
+        <div id="HeaderBikePicDiv">
+            <a href="#" onMouseOver="document.BikePics.src = image2.src;"
+               onMouseOut="document.BikePics.src = image1.src;">
+                <img name="BikePics" src="../Images/beachBikePic.jpg" alt="logo" width="700" height="313" />
+            </a> <br />
+            <script>
+
+                if (document.images) {
+                    var image1 = new Image();
+                    image1.src = "../Images/beachBikePic.jpg";
+                    var image2 = new Image();
+                    image2.src = "../Images/san-francisco-bike.jpg";
+                }
+            </script>
+
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+
+
+    <!--brief description of what the website is about-->
+
+    <div class="column">
+
+
+        <div class="container2">
+            <!--updated resources path -->
+
+
+            <div id="description">
+                <ul class="rslides">
+                    
+					<li><blockquote>Hi there! If you're looking for a quality, affordable bicycle to rent, then you are at the right place. </blockquote></li>
+                    <li><blockquote>Since 2010, we have been providing quality customer service and enjoyable riding experiences for the general public.</blockquote></li>
+                    <li><blockquote>Check out our pricing and bike rental options today.We look forward to hearing from you!</blockquote></li>
+                </ul>
+
+            </div>
+            <div class="overlay">
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+    <!-- James K and James W part of animation code for Week 6-->
+    <div class="bannerCycling">
+        <img src="../Images/beautiful sky bike pic 2-17.jpg" id="defaultPic" alt="Bike Banner" width="700" height="700">
+        <script>
+            window.onload = cycleThroughPictures;
+
+            var theBanner = 0;
+            var rotatingBikeGallery = new Array("../Images/3 people riding bikes in field 2-17.jpg", "../Images/bike picnic pic 2-17.jpg", "../Images/bikes near water pic 2-17.jpg", "../Images/beautiful sky bike pic 2-17.jpg");
+
+            function cycleThroughPictures() {
+                theBanner++;
+                if (theBanner == rotatingBikeGallery.length) {
+                    theBanner = 0;
+                }
+                document.getElementById("defaultPic").src = rotatingBikeGallery[theBanner];
+
+                setTimeout(cycleThroughPictures, 3 * 1000);
+            }
+        </script>
+    </div>
+    <!--Calendar Wk11 -->
+    <div id="Cal">
+        <h2>Upcoming Events For April!</h2>
+        <div class="calendarSec">
+            <table id="AprilCalendar">
+                <caption>April 2022</caption>
+                <tr class="weekdays">
+                    <th scope="col">Sunday</th>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                    <th scope="col">Saturday</th>
+                </tr>
+                <tr class="days">
+                    <td class="day other-month">
+                        <div class="date"></div>
+                    </td>
+                    <td class="day other-month">
+                        <div class="date"></div>
+                    </td>
+                    <td class="day other-month">
+                        <div class="date"></div>
+                    </td>
+                    <td class="day other-month">
+                        <div class="date"></div>
+                    </td>
+                    <td class="day other-month">
+                        <div class="date"></div>
+                    </td>
+                    <td class="day">
+                        <div class="date">1</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">2</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day">
+                        <div class="date">3</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">4</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">5</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">6</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">7</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">8</div>
+                        <div class="event">
+                            <div class="event-desc">
+                                Holland City Bike Tour
+                            </div>
+                            <div class="event-time">
+                                8:00am
+                            </div>
+                        </div>
+                    <td class="day">
+                        <div class="date">9</div>
+                    </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day">
+                        <div class="date">10</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">11</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">12</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">13</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">14</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">15</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">16</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day">
+                        <div class="date">17</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">18</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">19</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">20</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">21</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">22</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">23</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="day">
+                        <div class="date">24</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">25</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">26</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">27</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">28</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">29</div>
+                    </td>
+                    <td class="day">
+                        <div class="date">30</div>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+
+    <div id="footer">
+    </div>
+
+    <script src="../JavaScript/modernizr.custom.05819.js"></script>
+
+
+
+</body>
+</html>
