@@ -35,3 +35,9 @@ setInterval(function moveText() {
 }, 20)
 
 //James W Javascript ends here
+
+//Ammar April 9
+
+$(function() {
+    $(".rslides").responsiveSlides();
+  });
