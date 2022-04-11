@@ -1,8 +1,6 @@
-﻿
-
 //James W Javascript Starts here
 //function that controls moving text
-setInterval(function moveText() {
+/*setInterval(function moveText() {
     context.fillStyle = "green";
 
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -32,12 +30,6 @@ setInterval(function moveText() {
     context.fillText("Call Us today at 517-555-5392", posX, posY);
 
 
-}, 20)
+}, 20)*/
 
 //James W Javascript ends here
-
-//Ammar April 9
-
-$(function() {
-    $(".rslides").responsiveSlides();
-  });
