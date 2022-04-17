@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Rent-A-Bike</title>
+    <!--
+        Community Rent-A-Bike, Bike Rental Page
+        Filename: rentabike.html
+        Author: Group
+        Date: 2022
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!--Updated CSS Path -->
+    <!--    <link rel="stylesheet" href="../CSS/a_styles.css">-->
+    <link type="text/css" rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        input[type=text]:focus {
+            background-color: #ffd969;
+            border-color: #000;
+        }
+
+        .acenter {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <!--   <link rel="stylesheet" href="../CSS/styles.css">-->
+    <!--    <script src="a_javascript.js"></script>-->
+    <script src="../JavaScript/modernizr.custom.05819.js"></script>
+    <script src="../JavaScript/script.js"></script>
+</head>
+<body>
+<div id="headerJ">
+    </div>
+
+    <div class="container1">
+        <!-- <header>
+            <h1 style="font-family: arvo, Calibri, Tahoma;">Community Rent-A-Bike</h1>
+        </header>-->
+        <div class="topnav">
+
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a class="active" href="rentabike.html">Rent a Bike</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="RegistrationForm_A.html">Event Registration</a>
+			<a href="ajax.html">Weather Tool</a>
+
+        </div>
+        <br>
+<article style="min-height:600px;">
+<h2 style="padding-top:30px;">Current Weather</h2>
+<p style="padding-top:30px;">Browse a city's current weather below so you can know when a good time to ride is!</p>
+
+</br>
+<div class="weatherButtons">
+<button type="button" onclick="loadHolland()">Holland Weather</button>
+<button type="button" onclick="loadDetroit()">Detroit Weather</button>
+<button type="button" onclick="loadGR()">Grand Rapids Weather</button>
+<button type="button" onclick="loadTraverse()">Traverse City Weather</button>
+<button type="button" onclick="loadLansing()">Lansing Weather</button>
+<button type="button" onclick="loadNovi()">Novi Weather</button>
+</div>
+<div id="demo">
+<div id="weatherContainer" style="padding-top:30px; font-size:2em;">
+	<span id="cityName"></span>
+    <span id="temp"></span>
+    <span id="main"></span>
+</div>
+</div>
+</article>
+
+<script>
+const cityName = document.querySelector("#cityName");
+const Temp = document.querySelector("#temp");
+const main = document.querySelector("#main");
+
+function loadHolland() {
+  var xhttp; 
+  
+  if(window.XMLHttpRequest){
+		xhttp = new XMLHttpRequest();
+  }else{
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  xhttp.onreadystatechange = function(){
+		if (xhttp.readyState==4) {
+		var results = JSON.parse(xhttp.responseText);
+			document.getElementById('cityName').innerHTML = results.name + ", ";
+			document.getElementById('temp').innerHTML = `${Math.round(results.main.temp - 273.15)}°C`;
+			document.getElementById('main').innerHTML = results.weather[0].main;
+		}
+  }
+  
+  xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Holland&appid=d7bf6554698a0a2ee200e92e6b0e39f1", true);
+  xhttp.send();
+}
+
+function loadDetroit() {
+  var xhttp; 
+  
+  if(window.XMLHttpRequest){
+		xhttp = new XMLHttpRequest();
+  }else{
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  xhttp.onreadystatechange = function(){
+		if (xhttp.readyState==4) {
+		var results = JSON.parse(xhttp.responseText);
+			document.getElementById('cityName').innerHTML = results.name  + ", ";
+			document.getElementById('temp').innerHTML = `${Math.round(results.main.temp - 273.15)}°C`;
+			document.getElementById('main').innerHTML = results.weather[0].main;
+		}
+  }
+  
+  xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Detroit&appid=d7bf6554698a0a2ee200e92e6b0e39f1", true);
+  xhttp.send();
+}
+
+function loadGR() {
+  var xhttp; 
+  
+  if(window.XMLHttpRequest){
+		xhttp = new XMLHttpRequest();
+  }else{
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  xhttp.onreadystatechange = function(){
+		if (xhttp.readyState==4) {
+		var results = JSON.parse(xhttp.responseText);
+			document.getElementById('cityName').innerHTML = results.name  + ", ";
+			document.getElementById('temp').innerHTML = `${Math.round(results.main.temp - 273.15)}°C`;
+			document.getElementById('main').innerHTML = results.weather[0].main;
+		}
+  }
+  
+  xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=East Grand Rapids&appid=d7bf6554698a0a2ee200e92e6b0e39f1", true);
+  xhttp.send();
+}
+
+function loadTraverse() {
+  var xhttp; 
+  
+  if(window.XMLHttpRequest){
+		xhttp = new XMLHttpRequest();
+  }else{
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  xhttp.onreadystatechange = function(){
+		if (xhttp.readyState==4) {
+		var results = JSON.parse(xhttp.responseText);
+			document.getElementById('cityName').innerHTML = results.name  + ", ";
+			document.getElementById('temp').innerHTML = `${Math.round(results.main.temp - 273.15)}°C`;
+			document.getElementById('main').innerHTML = results.weather[0].main;
+		}
+  }
+  
+  xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Grand Traverse County&appid=d7bf6554698a0a2ee200e92e6b0e39f1", true);
+  xhttp.send();
+}
+
+function loadLansing() {
+  var xhttp; 
+  
+  if(window.XMLHttpRequest){
+		xhttp = new XMLHttpRequest();
+  }else{
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  xhttp.onreadystatechange = function(){
+		if (xhttp.readyState==4) {
+		var results = JSON.parse(xhttp.responseText);
+			document.getElementById('cityName').innerHTML = results.name  + ", ";
+			document.getElementById('temp').innerHTML = `${Math.round(results.main.temp - 273.15)}°C`;
+			document.getElementById('main').innerHTML = results.weather[0].main;
+		}
+  }
+  
+  xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Lansing&appid=d7bf6554698a0a2ee200e92e6b0e39f1", true);
+  xhttp.send();
+}
+
+function loadNovi() {
+  var xhttp; 
+  
+  if(window.XMLHttpRequest){
+		xhttp = new XMLHttpRequest();
+  }else{
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  xhttp.onreadystatechange = function(){
+		if (xhttp.readyState==4) {
+		var results = JSON.parse(xhttp.responseText);
+			document.getElementById('cityName').innerHTML = results.name  + ", ";
+			document.getElementById('temp').innerHTML = `${Math.round(results.main.temp - 273.15)}°C`;
+			document.getElementById('main').innerHTML = results.weather[0].main;
+		}
+  }
+  
+  xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Novi&appid=d7bf6554698a0a2ee200e92e6b0e39f1", true);
+  xhttp.send();
+}
+</script>
+
+<div id="footer">
+        </div>
+</body>
+</html>
