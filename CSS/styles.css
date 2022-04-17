@@ -937,8 +937,34 @@ div.calendarSec {
 	margin: auto;
 }
 
+/*Weather Tool*/
+#weatherContainer {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	border-radius: 25px;
+	margin-top: 30px;
+	text-align: center;
+	min-height: 70px;
+	min-width: 300px;
+	background-color: white;
+}
+#cityName, #temp, #main{
+	color: green;
+}
+
+.weatherButtons button {
+	color: white;
+    background-color: #04AA6D;
+	margin-top: 10px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
 
 
 /*-------------------------------Avery stylesheet ends here------------------------------------*/
-
-
