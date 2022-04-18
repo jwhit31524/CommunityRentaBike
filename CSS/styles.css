@@ -9,6 +9,27 @@ element	              p	          Selects all <p> elements
 element,element,..	div, p	      Selects all <div> elements and all <p> elements 
 */
 
+/*wk 13 changes jw*/
+
+
+#weatherPar {
+    font-size: 2em;
+}
+
+
+#weatherDiv {
+    margin: auto;
+    width: 40%;
+    position: center;
+    position: relative;
+    border: 5px solid #04AA6D;
+    padding: 5%;
+    border-radius: 20%;
+    margin-bottom: .5%;
+    height: 40%;
+
+}
+
 .randomparblack {
     font-size: large;
     color: black;
