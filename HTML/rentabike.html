@@ -209,6 +209,33 @@
     <!--  updating js reference-->
     <script src="../JavaScript/script.js"></script>
     <script>
+	    var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+                if (xmlhttp.status == 200) {
+                    var data = JSON.parse(xmlhttp.responseText);
+                    //access json properties
+
+                    var weatherhtmlSpot = document.getElementById("weatherPar").innerHTML = "Brief Weather Forecast: " + data.weather[0].description 
+                        + " " +
+                        " Location: " + data.name + " " + "Humidity: " + data.main.humidity;
+
+                   // alert("Weather: " + data.weather[0].description);
+                }
+                else if (xmlhttp.status == 400) {
+                    alert('alert error 400');
+                }
+                else {
+                    alert('not 200 is occurring');
+                }
+            }
+        };
+        xmlhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?zip=48201,us&appid=a3908c88a2d9ff029bca06ebdb0a0ee3", true);
+        xmlhttp.send();
+        
+					 
+					 
+					 
 	function ValidateForm(frm) {
   if (frm.First_Name.value == "") {
     alert('First name is required.');
