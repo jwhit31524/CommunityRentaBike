@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<!--
+
+   Bike Rentals
+   Author: Team 2
+   Date: 2-6-2022
+
+-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Prices</title>
+<!--updated css path -->
+<!--<link rel="stylesheet" href="../CSS/CSS.css" />-->
+<link type="text/css" rel="stylesheet" href="../CSS/styles.css">
+
+
+
+
+
+<body>
+    <div id="headerJ"> </div>
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a class="active" href="pricing.html">Pricing</a>
+        <a href="rentabike.html">Rent a Bike</a>
+
+        <!-- Updated html reference -->
+        <a href="contact.html">Contact Us</a>
+	<a href="RegistrationForm_A.html">Event Registration</a>
+	    <a href="ajax.html">Weather Tool</a>
+
+    </div>
+    <!--AGJK-->
+    <div class="calculatorButton">
+        <p>Trying to plan your rentals? Use our provided price quoting calculator by clicking the "calculate" button below! Please ensure that your browser supports pop ups in order to properly experience this site function.</p>
+        <button type="button"><a href="RentaBikeCalculator.html" onclick="Popup(this.href,'myWindow','800','650','yes');return false">Calculate</a></button>
+		<div class="container3">
+		<p class="try" id="tryme" >Try me</p>
+            <!--updated resources path -->
+            <img src="/resources/bike_wheel-5121.png" id="tryme" class="image" >
+			</div>
+    </div><hr>
+
+
+    <!-- James W and Ammar
+     First name
+     Last name
+     Phone
+     Email
+     Number of Bikes
+     Pickup Location
+     Rental Start date
+     Rental End date
+     Comments-->
+
+
+    <div reservationFormDiv>
+        <form id="reserveForm">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" required="required"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" required="required"><br>
+
+            <label for="phoneno">Phone Number:</label><br>
+            <input type="tel" id="phoneno" name="phoneno" required="required"><br>
+
+            <label for="emailaddr">Email Address:</label><br>
+            <input type="email" id="emailaddr" name="emailaddr" required="required"><br>
+
+            <label for="noOfBikes">Number of Bikes:</label><br>
+            <input type="number" id="noOfBikes" name="noOfBikes" required="required"><br>
+
+            <label for="pickupLocation">Pick Up Location:</label><br>
+            <script>
+                var selectedLocation = document.getElementsByTagName("select");
+                selectedLocation.selectedIndex === -1;
+            </script>
+
+            <select>
+                <option>Lansing</option>
+                <option>Grand Rapids</option>
+                <option>Detroit</option>
+
+            </select>
+
+            <br>
+            <label for="rentalStartDate">Rental Start Date:</label><br>
+            <input type="date" id="rentalStartDate" name="rentalStartDate" required="required" /><br>
+            <br>
+
+            <label for="rentalStartTime">Rental Start Time:</label><br>
+            <input type="time" id="rentalStartTime" name="rentalStartTime" required="required" /><br>
+            <br>
+
+            <label for="rentalEndDate">Rental End Date:</label><br>
+            <input type="date" id="rentalEndDate" name="rentalEndDate" required="required" /><br>
+
+            <label for="rentalEndTime">Rental End Time:</label><br>
+            <input type="time" id="rentalEndTime" name="rentalEndTime" required="required" /><br>
+
+
+            <label for="formComments">Form Comments:</label><br>
+            <input type="text" rows="3" cols="4" id="formComments" name="formComments"><br>
+
+            <button type="button" class="button submitReserveFormButton" onclick="validateFormData()">Submit Form</button>
+            <button type="button" class="button cancelReserveFormButton" onclick="hideReserveForm()">Cancel</button>
+
+        </form>
+    </div>
+    <!--------------------------------------------------------------------------->
+    <!--JWAA this function shows the form-->
+    <script type="text/javascript">
+        function showReserveForm() {
+            document.getElementById('reserveForm').style.display = 'block';
+        }
+    </script>
+
+    <!--
+        JWAA validation checks-->
+    <script>
+        var requiredField = true;
+        var firstNameCheck = "notPassed";
+        var lastNameCheck = "notPassed";
+        var phoneNumberCheck = "notPassed";
+        var emailAddressCheck = "notPassed";
+        var numberOfBikesCheck = "notPassed";
+        var pickUpLocationCheck = "notPassed";
+        var rentalStartDateCheck = "notPassed";
+        var rentalStartTimeCheck = "notPassed";
+        var rentalEndDateCheck = "notPassed";
+        var rentalEndTimeCheck = "notPassed";
+
+
+        function hideReserveForm() {
+            var reserveFormVariable = document.getElementById('reserveForm');
+            reserveFormVariable.style.display = "none";
+        }
+
+        /*JWAA  the functions below validate different parts of the form*/
+        function validateFirstName() {
+            var firstNameVar = document.getElementById("lname").value;
+            if (firstNameVar.length <= 0) {
+                alert("Please type in a valid first name");
+            }
+
+            else {
+                firstNameCheck = "passed";
+            }
+        }
+        function validateLastName() {
+            var lastNameVar = document.getElementById("lname").value;
+            if (lastNameVar.length <= 0) {
+                alert("Please type in a valid last name");
+            }
+
+            else {
+                lastNameCheck = "passed";
+            }
+        }
+
+        function validatePhoneNumber() {
+            var phoneNoVar = document.getElementById("phoneno").value;
+            if (phoneNoVar.length < 10) {
+                alert("Please type in a valid 10 digit phone number");
+            }
+            else {
+                phoneNumberCheck = "not passed";
+            }
+        }
+
+
+        function validateEmailAddress() {
+            var emailaddrVar = document.getElementById("emailaddr").value;
+            if (emailaddrVar.length < 8) {
+                alert("Please type in a valid email address");
+            }
+            else {
+                emailAddressCheck = "passed";
+            }
+        }
+
+        function validateNumberOfBikes() {
+            var noOfBikesVar = document.getElementById("noOfBikes").value;
+            if (noOfBikesVar < 1) {
+                alert("Please type in the number of bikes you would like to rent");
+            }
+            else {
+                numberOfBikesCheck = "passed";
+            }
+        }
+
+
+
+        function validatePickUpLocation() {
+            var selectedLocation = document.getElementsByTagName("select");
+            selectedLocation.selectedIndex === -1;
+            if (selectedLocation.selectedIndex === -1) {
+                alert("You must select at least one option");
+
+            }
+            else {
+                pickUpLocationCheck = "passed";
+            }
+
+        }
+
+        function validateRentalStartDate() {
+            var rentalStartDateVar = document.getElementById("rentalStartDate");
+
+            if (rentalStartDateVar.value === "") {
+                alert("You must select a pick up date");
+
+
+            }
+
+            else {
+                rentalStartDateCheck = "passed";
+            }
+        }
+
+        function validateRentalStartTime() {
+            var rentalStartTimeVar = document.getElementById("rentalStartTime");
+
+            if (rentalStartTimeVar.value === "") {
+                alert("You must select a pick up time");
+
+
+            }
+
+            else {
+                rentalStartTimeCheck = "passed";
+            }
+        }
+
+        function validateRentalEndDate() {
+            var rentalEndDateVar = document.getElementById("rentalEndDate");
+
+            if (rentalEndDateVar.value === "") {
+                alert("You must select a return date");
+
+
+            }
+
+            else {
+                rentalEndDateCheck = "passed";
+            }
+        }
+
+        function validateRentalEndTime() {
+            var rentalEndDateVar = document.getElementById("rentalEndTime");
+
+            if (rentalEndDateVar.value === "") {
+                alert("You must select a return time");
+
+
+            }
+
+            else {
+                rentalEndTimeCheck = "passed";
+            }
+        }
+
+        /* JWAA  this function runs all of the validation functions*/
+        function validateFormData() {
+            validateFirstName();
+            validateLastName();
+            validatePhoneNumber();
+            validateEmailAddress();
+            validateNumberOfBikes();
+            validatePickUpLocation();
+            validateRentalStartDate();
+            validateRentalEndDate();
+
+
+            if (firstNameCheck == "passed" && lastNameCheck == "passed" && phoneNumberCheck == "passed" && emailAddressCheck == "passed" && numberOfBikesCheck == "passed" && pickUpLocationCheck == "passed"
+                && rentalStartDateCheck == "passed" && rentalEndDateCheck == "passed") {
+                window.location.href = 'successfulReservation.html'
+            }
+
+            //will test for time in another week. for now time is not mandatory for form submission
+            //       && rentalStartTimeCheck == "passed" && rentalEndDateCheck == "passed"
+            //   && rentalEndTimeCheck == "passed"-->
+        }
+
+    </script>
+    <!--------------------------------------------------------------------------->
+    <!--  the code below displays the different bike pics-->
+    
+	
+	<div class="column">
+        <div class="container5">
+            <button type="button" class="button buttonTandem" onclick="showReserveForm()">Reserve a Tandem Bike</button><br>
+			<!-- <button class="try" id="tryme" >Try me</button> -->
+            <!--updated resources path -->
+            <img src="../resources/tandem-bike.png" alt="Avatar" class="image" >
+            <div class="overlay">
+                <div class="text">Tandem-bike</div>
+            </div>
+        </div>
+    </div>
+
+    <!--onmouseover="this.style.background-color: green-->
+
+    <div class="column">
+        <div class="container5">
+            <button type="button" class="button buttonRoadBike" onclick="showReserveForm()">Reserve a Road Bike</button>
+            <!--updated resources path -->
+            <img src="../resources/road-bike.png" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">road-bike</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="column">
+        <div class="container5">
+            <button type="button" class="button buttonVervePlusBike" onclick="showReserveForm()">Reserve a Verve Plus Bike</button>
+            <!--updated resources path -->
+            <img src="../resources/Picture-of-Verve-Plus-v2.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Picture-of-Verve-Plus-v2</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="column">
+        <div class="container5">
+            <button type="button" class="button buttonPerformanceBike" onclick="showReserveForm()">Reserve a Performance Bike</button>
+            <!--updated resources path -->
+            <img src="../resources/performance-bike.png" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">performance-bike</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="column">
+        <div class="container5">
+            <button type="button" class="button buttonComfortBike" onclick="showReserveForm()">Reserve a Comfort Bike</button>
+            <!--updated resources path -->
+            <img src="../resources/comfort-hybrid.png" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">comfort-hybrid</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="column">
+        <div class="container5">
+            <button type="button" class="button buttonKidsBike" onclick="showReserveForm()">Reserve a Kids Bike</button>
+            <!--updated resources path -->
+            <img src="../resources/kids-bike.png" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">kids-bike</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <script src="../JavaScript/Script/js.js"></script>-->
+    <script src="../JavaScript/modernizr.custom.05819.js"></script>
+    <!--  adding js reference -->
+    <script src="../JavaScript/script.js"></script>
+
+    <!--AGJK-->
+    <script>
+        var popupWindow = null;
+        function Popup(url, winName, w, h, scroll) {
+            LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+            TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+
+            specs = 'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + scroll + ',resizable'
+
+            popupWindow = window.open(url, winName, specs)
+        }
+    </script>
+	
+	 <!-- Ammar ans Avery part of animation code for Week 6-->
+	<script>
+var img = document.querySelector('.image');
+var btn = document.querySelector('.image');
+var rotate = false;
+var runner;
+var degrees = 0;
+
+function start(){
+document.getElementById("tryme").innerHTML = "Stop";
+    runner = setInterval(function(){
+        degrees++;
+        img.style.webkitTransform = 'rotate(' + degrees + 'deg)';	
+		
+    },1)
+	
+}
+
+function stop(){
+document.getElementById("tryme").innerHTML = "Try me";
+    degrees = 0;
+    clearInterval(runner);
+	img.style.webkitTransform = 'rotate(' + degrees + 'deg)';
+	
+}
+
+btn.addEventListener('click', function(){
+    if (!rotate){
+        rotate = true;
+        start();
+    } else {
+        rotate = false;
+        stop();
+    }
+})
+      </script>
+
+</body>
+<div id="footer"> </div>
+
+</html>
